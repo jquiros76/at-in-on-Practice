@@ -21,233 +21,125 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--ink);font-family:'Nunito',sans-serif;min-height:100vh}
-
-/* HEADER */
-.hdr{
-background:linear-gradient(135deg,#4f46e5 0%,#7c3aed 40%,#0d9488 100%);
-padding:18px 22px;display:flex;align-items:center;gap:14px;
-}
-.hdr-icon{
-width:50px;height:50px;border-radius:14px;flex-shrink:0;
-background:rgba(255,255,255,.15);
-display:flex;align-items:center;justify-content:center;font-size:1.5rem;
-}
+.hdr{background:linear-gradient(135deg,#4f46e5 0%,#7c3aed 40%,#0d9488 100%);padding:18px 22px;display:flex;align-items:center;gap:14px;}
+.hdr-icon{width:50px;height:50px;border-radius:14px;flex-shrink:0;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:1.5rem;}
 .hdr-text h1{font-size:1.25rem;font-weight:900;color:#fff;letter-spacing:-.02em}
 .hdr-text p{font-size:.73rem;color:rgba(255,255,255,.55);margin-top:2px}
 .hdr-pts{margin-left:auto;text-align:right}
-.hdr-pts-num{font-family:‘DM Mono’,monospace;font-size:2rem;font-weight:500;color:#fde68a;line-height:1}
+.hdr-pts-num{font-family:'DM Mono',monospace;font-size:2rem;font-weight:500;color:#fde68a;line-height:1}
 .hdr-pts-lbl{font-size:.6rem;color:rgba(255,255,255,.4)}
-
-/* BIG THREE */
-.big3{
-background:var(–ink);display:flex;
-}
-.b3{
-flex:1;padding:14px 10px;text-align:center;cursor:pointer;
-transition:all .2s;border-bottom:4px solid transparent;
-}
+.big3{background:var(--ink);display:flex;}
+.b3{flex:1;padding:14px 10px;text-align:center;cursor:pointer;transition:all .2s;border-bottom:4px solid transparent;}
 .b3:hover{background:rgba(255,255,255,.06)}
-.b3.active-at {background:var(–at-l);border-bottom-color:var(–at)}
-.b3.active-in {background:var(–in-l);border-bottom-color:var(–in)}
-.b3.active-on {background:var(–on-l);border-bottom-color:var(–on)}
-.b3.active-mix{background:var(–mix-l);border-bottom-color:var(–mix)}
-.b3-word{
-font-family:‘DM Mono’,monospace;font-size:1.4rem;font-weight:500;
-color:#fff;line-height:1;
-}
+.b3.active-at {background:var(--at-l);border-bottom-color:var(--at)}
+.b3.active-in {background:var(--in-l);border-bottom-color:var(--in)}
+.b3.active-on {background:var(--on-l);border-bottom-color:var(--on)}
+.b3.active-mix{background:var(--mix-l);border-bottom-color:var(--mix)}
+.b3-word{font-family:'DM Mono',monospace;font-size:1.4rem;font-weight:500;color:#fff;line-height:1;}
 .b3.active-at  .b3-word{color:#c4b5fd}
 .b3.active-in  .b3-word{color:#5eead4}
 .b3.active-on  .b3-word{color:#fdba74}
 .b3.active-mix .b3-word{color:#93c5fd}
 .b3-sub{font-size:.62rem;color:rgba(255,255,255,.38);margin-top:4px;text-transform:uppercase;letter-spacing:.05em}
-
-/* SUB TABS */
-.stabs{
-background:var(–surface);border-bottom:1px solid var(–border);
-display:flex;overflow-x:auto;scrollbar-width:none;padding:0 14px;
-}
+.stabs{background:var(--surface);border-bottom:1px solid var(--border);display:flex;overflow-x:auto;scrollbar-width:none;padding:0 14px;}
 .stabs::-webkit-scrollbar{display:none}
-.st{
-padding:9px 16px;cursor:pointer;white-space:nowrap;
-font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;
-color:var(–muted);border-bottom:2.5px solid transparent;margin-bottom:-1px;
-transition:all .18s;background:none;border-top:none;border-left:none;border-right:none;
-font-family:‘Nunito’,sans-serif;
-}
-.st:hover{color:var(–ink2)}
-.st.at-s {color:var(–at);border-bottom-color:var(–at)}
-.st.in-s {color:var(–in);border-bottom-color:var(–in)}
-.st.on-s {color:var(–on);border-bottom-color:var(–on)}
-.st.mix-s{color:var(–mix);border-bottom-color:var(–mix)}
-
-/* PROGRESS */
-.prog{height:3px;background:var(–border)}
+.st{padding:9px 16px;cursor:pointer;white-space:nowrap;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:2.5px solid transparent;margin-bottom:-1px;transition:all .18s;background:none;border-top:none;border-left:none;border-right:none;font-family:'Nunito',sans-serif;}
+.st:hover{color:var(--ink2)}
+.st.at-s {color:var(--at);border-bottom-color:var(--at)}
+.st.in-s {color:var(--in);border-bottom-color:var(--in)}
+.st.on-s {color:var(--on);border-bottom-color:var(--on)}
+.st.mix-s{color:var(--mix);border-bottom-color:var(--mix)}
+.prog{height:3px;background:var(--border)}
 .pf{height:100%;transition:width .4s ease}
-
-/* SECTION */
 .sec{display:none}.sec.active{display:block}
 .wrap{max-width:720px;margin:0 auto;padding:20px 13px 80px}
-
-/* REF CARD */
-.ref{
-background:var(–card);border:1.5px solid var(–border);
-border-radius:16px;padding:18px 20px;margin-bottom:18px;overflow:hidden;
-}
-.ref-title{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(–muted);margin-bottom:14px}
+.ref{background:var(--card);border:1.5px solid var(--border);border-radius:16px;padding:18px 20px;margin-bottom:18px;overflow:hidden;}
+.ref-title{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px}
 .ref-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 @media(max-width:500px){.ref-grid{grid-template-columns:1fr}}
 .rbox{border-radius:11px;padding:12px 13px;border:1.5px solid}
-.rbox-word{font-family:‘DM Mono’,monospace;font-size:1.2rem;font-weight:500;margin-bottom:8px}
-.rbox-items{font-size:.73rem;line-height:1.7;color:var(–ink2)}
+.rbox-word{font-family:'DM Mono',monospace;font-size:1.2rem;font-weight:500;margin-bottom:8px}
+.rbox-items{font-size:.73rem;line-height:1.7;color:var(--ink2)}
 .rbox-items span{display:block}
-.rbox-at {background:var(–at-l);border-color:var(–at-b)} .rbox-at .rbox-word{color:var(–at)}
-.rbox-in {background:var(–in-l);border-color:var(–in-b)} .rbox-in .rbox-word{color:var(–in)}
-.rbox-on {background:var(–on-l);border-color:var(–on-b)} .rbox-on .rbox-word{color:var(–on)}
-
-/* STATS */
+.rbox-at{background:var(--at-l);border-color:var(--at-b)}.rbox-at .rbox-word{color:var(--at)}
+.rbox-in{background:var(--in-l);border-color:var(--in-b)}.rbox-in .rbox-word{color:var(--in)}
+.rbox-on{background:var(--on-l);border-color:var(--on-b)}.rbox-on .rbox-word{color:var(--on)}
 .stats{display:flex;gap:8px;margin-bottom:16px}
-.stat{flex:1;background:var(–card);border:1.5px solid var(–border);border-radius:11px;padding:9px 10px;text-align:center}
-.sv{font-family:‘DM Mono’,monospace;font-size:1.3rem;font-weight:500;line-height:1}
-.sl{font-size:.6rem;color:var(–muted);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
-
-/* QUESTION CARD */
-.qcard{
-background:var(–card);border:2px solid var(–border);
-border-radius:15px;overflow:hidden;margin-bottom:12px;
-transition:border-color .22s,box-shadow .22s;
-}
-.qcard.ok  {border-color:var(–green);box-shadow:0 2px 10px rgba(21,128,61,.1)}
-.qcard.fail{border-color:var(–red);box-shadow:0 2px 10px rgba(185,28,28,.09)}
-
-.qcard-top{padding:14px 17px 11px;border-bottom:1px solid var(–border)}
+.stat{flex:1;background:var(--card);border:1.5px solid var(--border);border-radius:11px;padding:9px 10px;text-align:center}
+.sv{font-family:'DM Mono',monospace;font-size:1.3rem;font-weight:500;line-height:1}
+.sl{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
+.qcard{background:var(--card);border:2px solid var(--border);border-radius:15px;overflow:hidden;margin-bottom:12px;transition:border-color .22s,box-shadow .22s;}
+.qcard.ok  {border-color:var(--green);box-shadow:0 2px 10px rgba(21,128,61,.1)}
+.qcard.fail{border-color:var(--red);box-shadow:0 2px 10px rgba(185,28,28,.09)}
+.qcard-top{padding:14px 17px 11px;border-bottom:1px solid var(--border)}
 .qmeta{display:flex;align-items:center;gap:7px;margin-bottom:8px;flex-wrap:wrap}
-.qnum{
-width:27px;height:27px;border-radius:7px;flex-shrink:0;
-background:var(–surface);border:1.5px solid var(–border2);
-display:flex;align-items:center;justify-content:center;
-font-family:‘DM Mono’,monospace;font-size:.7rem;color:var(–ink2);font-weight:500;
-}
-.qcard.ok   .qnum{background:var(–green);color:#fff;border-color:var(–green)}
-.qcard.fail .qnum{background:var(–red);color:#fff;border-color:var(–red)}
+.qnum{width:27px;height:27px;border-radius:7px;flex-shrink:0;background:var(--surface);border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:.7rem;color:var(--ink2);font-weight:500;}
+.qcard.ok   .qnum{background:var(--green);color:#fff;border-color:var(--green)}
+.qcard.fail .qnum{background:var(--red);color:#fff;border-color:var(--red)}
 .qtag{font-size:.6rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:2px 8px;border-radius:20px}
-.tg-at {background:var(–at-l);color:var(–at)}
-.tg-in {background:var(–in-l);color:var(–in)}
-.tg-on {background:var(–on-l);color:var(–on)}
-.tg-mix{background:var(–mix-l);color:var(–mix)}
-.tg-err{background:rgba(180,83,9,.1);color:var(–gold)}
-.tg-neg{background:rgba(185,28,28,.1);color:var(–red)}
-.qlbl{font-size:.62rem;color:var(–muted);margin-left:auto;font-family:‘DM Mono’,monospace}
-
-.qinstr{font-size:.76rem;color:var(–ink2);margin-bottom:7px;line-height:1.5}
-.qsent{
-background:var(–surface);border:1.5px solid var(–border);
-border-radius:9px;padding:11px 14px;
-font-size:.95rem;line-height:1.75;color:var(–ink);font-weight:700;
-}
-.qsent .gap{
-display:inline-block;min-width:55px;border-bottom:2.5px solid var(–muted);
-text-align:center;color:var(–muted);font-style:italic;font-weight:400;
-margin:0 3px;font-size:.86rem;
-}
-.qsent .ew{
-background:rgba(185,28,28,.1);border-bottom:2px solid var(–red);
-padding:1px 4px;border-radius:4px;color:var(–red);font-weight:700;
-}
-.sig{
-display:inline-flex;align-items:center;gap:5px;margin-top:6px;
-font-size:.65rem;color:var(–muted);background:rgba(255,255,255,.7);
-border:1px solid var(–border);border-radius:5px;padding:2px 8px;
-font-family:‘DM Mono’,monospace;
-}
-
-/* OPTIONS */
+.tg-at {background:var(--at-l);color:var(--at)}
+.tg-in {background:var(--in-l);color:var(--in)}
+.tg-on {background:var(--on-l);color:var(--on)}
+.tg-mix{background:var(--mix-l);color:var(--mix)}
+.tg-err{background:rgba(180,83,9,.1);color:var(--gold)}
+.tg-neg{background:rgba(185,28,28,.1);color:var(--red)}
+.qlbl{font-size:.62rem;color:var(--muted);margin-left:auto;font-family:'DM Mono',monospace}
+.qinstr{font-size:.76rem;color:var(--ink2);margin-bottom:7px;line-height:1.5}
+.qsent{background:var(--surface);border:1.5px solid var(--border);border-radius:9px;padding:11px 14px;font-size:.95rem;line-height:1.75;color:var(--ink);font-weight:700;}
+.qsent .gap{display:inline-block;min-width:55px;border-bottom:2.5px solid var(--muted);text-align:center;color:var(--muted);font-style:italic;font-weight:400;margin:0 3px;font-size:.86rem;}
+.qsent .ew{background:rgba(185,28,28,.1);border-bottom:2px solid var(--red);padding:1px 4px;border-radius:4px;color:var(--red);font-weight:700;}
+.sig{display:inline-flex;align-items:center;gap:5px;margin-top:6px;font-size:.65rem;color:var(--muted);background:rgba(255,255,255,.7);border:1px solid var(--border);border-radius:5px;padding:2px 8px;font-family:'DM Mono',monospace;}
 .opts{display:flex;flex-direction:column;gap:7px;padding:12px 15px}
-.opt{
-display:flex;align-items:center;gap:8px;
-background:var(–surface);border:2px solid var(–border);
-border-radius:9px;padding:9px 13px;cursor:pointer;
-font-size:.86rem;font-weight:600;color:var(–ink);
-transition:all .14s;user-select:none;
-}
-.opt:hover:not(.dis){border-color:var(–at);background:var(–at-l)}
-.opt.sel{border-color:var(–at);background:var(–at-l)}
-.opt.ok {border-color:var(–green);background:var(–gbg);color:var(–green);font-weight:800}
-.opt.bad{border-color:var(–red);background:var(–rbg);color:var(–red)}
+.opt{display:flex;align-items:center;gap:8px;background:var(--surface);border:2px solid var(--border);border-radius:9px;padding:9px 13px;cursor:pointer;font-size:.86rem;font-weight:600;color:var(--ink);transition:all .14s;user-select:none;}
+.opt:hover:not(.dis){border-color:var(--at);background:var(--at-l)}
+.opt.ok {border-color:var(--green);background:var(--gbg);color:var(--green);font-weight:800}
+.opt.bad{border-color:var(--red);background:var(--rbg);color:var(--red)}
 .opt.dis{cursor:default}
-.ol{
-width:24px;height:24px;flex-shrink:0;border-radius:6px;
-border:2px solid var(–border);background:var(–card);
-display:flex;align-items:center;justify-content:center;
-font-family:‘DM Mono’,monospace;font-size:.68rem;font-weight:700;
-}
-.opt.ok  .ol{background:var(–green);color:#fff;border-color:var(–green)}
-.opt.bad .ol{background:var(–red);color:#fff;border-color:var(–red)}
-.opt.sel .ol{background:var(–at);color:#fff;border-color:var(–at)}
-
-/* 3-BUTTON SPECIAL */
+.ol{width:24px;height:24px;flex-shrink:0;border-radius:6px;border:2px solid var(--border);background:var(--card);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:.68rem;font-weight:700;}
+.opt.ok  .ol{background:var(--green);color:#fff;border-color:var(--green)}
+.opt.bad .ol{background:var(--red);color:#fff;border-color:var(--red)}
 .three-btns{display:flex;gap:10px;padding:12px 15px}
-.prep-btn{
-flex:1;padding:11px 8px;border-radius:11px;border:2px solid var(–border);
-font-family:‘DM Mono’,monospace;font-size:1.1rem;font-weight:500;
-cursor:pointer;transition:all .15s;background:var(–surface);color:var(–ink);
-text-align:center;
-}
+.prep-btn{flex:1;padding:11px 8px;border-radius:11px;border:2px solid var(--border);font-family:'DM Mono',monospace;font-size:1.1rem;font-weight:500;cursor:pointer;transition:all .15s;background:var(--surface);color:var(--ink);text-align:center;}
 .prep-btn:hover:not(.dis){transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08)}
-.prep-btn.at:hover:not(.dis){border-color:var(–at);background:var(–at-l);color:var(–at)}
-.prep-btn.in:hover:not(.dis){border-color:var(–in);background:var(–in-l);color:var(–in)}
-.prep-btn.on:hover:not(.dis){border-color:var(–on);background:var(–on-l);color:var(–on)}
-.prep-btn.ok {border-color:var(–green);background:var(–gbg);color:var(–green);font-weight:700}
-.prep-btn.bad{border-color:var(–red);background:var(–rbg);color:var(–red)}
+.prep-btn.at:hover:not(.dis){border-color:var(--at);background:var(--at-l);color:var(--at)}
+.prep-btn.in:hover:not(.dis){border-color:var(--in);background:var(--in-l);color:var(--in)}
+.prep-btn.on:hover:not(.dis){border-color:var(--on);background:var(--on-l);color:var(--on)}
+.prep-btn.ok {border-color:var(--green);background:var(--gbg);color:var(--green);font-weight:700}
+.prep-btn.bad{border-color:var(--red);background:var(--rbg);color:var(--red)}
 .prep-btn.dis{cursor:default;opacity:.7}
-.prep-btn-lbl{font-size:.6rem;display:block;margin-top:2px;font-family:‘Nunito’,sans-serif;font-weight:600;opacity:.7}
-
-/* WRITE */
+.prep-btn-lbl{font-size:.6rem;display:block;margin-top:2px;font-family:'Nunito',sans-serif;font-weight:600;opacity:.7}
 .write-area{padding:12px 15px}
 .wr{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
-.wi{
-background:var(–surface);border:2px solid var(–border);
-border-radius:9px;padding:8px 13px;
-color:var(–ink);font-family:‘DM Mono’,monospace;font-size:.9rem;font-weight:500;
-flex:1;min-width:140px;outline:none;transition:border-color .2s;
-}
-.wi:focus{border-color:var(–at)}
-.wi.ok  {border-color:var(–green);background:var(–gbg);color:var(–green)}
-.wi.fail{border-color:var(–red);background:var(–rbg)}
+.wi{background:var(--surface);border:2px solid var(--border);border-radius:9px;padding:8px 13px;color:var(--ink);font-family:'DM Mono',monospace;font-size:.9rem;font-weight:500;flex:1;min-width:140px;outline:none;transition:border-color .2s;}
+.wi:focus{border-color:var(--at)}
+.wi.ok  {border-color:var(--green);background:var(--gbg);color:var(--green)}
+.wi.fail{border-color:var(--red);background:var(--rbg)}
 .wi:disabled{opacity:.85}
-.chk{
-background:var(–at);color:#fff;border:none;border-radius:9px;
-padding:8px 18px;font-family:‘Nunito’,sans-serif;font-size:.83rem;font-weight:800;
-cursor:pointer;transition:opacity .2s;white-space:nowrap;
-}
+.chk{background:var(--at);color:#fff;border:none;border-radius:9px;padding:8px 18px;font-family:'Nunito',sans-serif;font-size:.83rem;font-weight:800;cursor:pointer;transition:opacity .2s;white-space:nowrap;}
 .chk:hover{opacity:.85}
-.chk:disabled{background:var(–border);color:var(–muted);cursor:default}
-
-/* FEEDBACK */
+.chk:disabled{background:var(--border);color:var(--muted);cursor:default}
 .fb{margin:0 15px 13px;padding:11px 13px;border-radius:9px;font-size:.79rem;line-height:1.65;display:none}
 .fb.show{display:block}
-.fb.ok  {background:var(–gbg);border:1px solid rgba(21,128,61,.22);color:#14532d}
-.fb.fail{background:var(–rbg);border:1px solid rgba(185,28,28,.18);color:#7f1d1d}
-.fb .cor{margin-top:7px;padding:7px 11px;background:rgba(21,128,61,.1);border-radius:7px;font-family:‘DM Mono’,monospace;font-size:.8rem;color:#14532d;font-weight:500}
-.fb .rn {margin-top:6px;padding:7px 11px;background:rgba(255,255,255,.7);border:1px solid var(–border);border-radius:7px;font-size:.76rem;color:var(–ink2)}
-.fb .rn strong{color:var(–ink)}
-
-/* COMPLETE */
-.done{background:var(–card);border:2px solid var(–border);border-radius:18px;padding:34px 22px;text-align:center;display:none;margin-bottom:16px}
+.fb.ok  {background:var(--gbg);border:1px solid rgba(21,128,61,.22);color:#14532d}
+.fb.fail{background:var(--rbg);border:1px solid rgba(185,28,28,.18);color:#7f1d1d}
+.fb .cor{margin-top:7px;padding:7px 11px;background:rgba(21,128,61,.1);border-radius:7px;font-family:'DM Mono',monospace;font-size:.8rem;color:#14532d;font-weight:500}
+.fb .rn {margin-top:6px;padding:7px 11px;background:rgba(255,255,255,.7);border:1px solid var(--border);border-radius:7px;font-size:.76rem;color:var(--ink2)}
+.fb .rn strong{color:var(--ink)}
+.done{background:var(--card);border:2px solid var(--border);border-radius:18px;padding:34px 22px;text-align:center;display:none;margin-bottom:16px}
 .done.show{display:block}
 .done-emoji{font-size:3rem;margin-bottom:10px}
-.done-score{font-family:‘DM Mono’,monospace;font-size:3.3rem;font-weight:500;line-height:1}
-.done-lbl{font-size:.78rem;color:var(–muted);margin-bottom:12px}
+.done-score{font-family:'DM Mono',monospace;font-size:3.3rem;font-weight:500;line-height:1}
+.done-lbl{font-size:.78rem;color:var(--muted);margin-bottom:12px}
 .done-grade{font-size:.95rem;font-weight:800;margin-bottom:14px}
 .done-chips{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
 .dc{padding:6px 13px;border-radius:20px;font-size:.73rem;font-weight:800}
-.dc-ok {background:var(–gbg);color:var(–green)}
-.dc-fail{background:var(–rbg);color:var(–red)}
-.dc-pts{background:rgba(180,83,9,.1);color:var(–gold)}
+.dc-ok {background:var(--gbg);color:var(--green)}
+.dc-fail{background:var(--rbg);color:var(--red)}
+.dc-pts{background:rgba(180,83,9,.1);color:var(--gold)}
 .done-btns{display:flex;gap:7px;justify-content:center;flex-wrap:wrap}
-.db{padding:9px 20px;border-radius:9px;border:none;font-family:‘Nunito’,sans-serif;font-size:.83rem;font-weight:800;cursor:pointer;transition:all .2s}
-.db-p{background:linear-gradient(135deg,var(–at),var(–in));color:#fff}.db-p:hover{opacity:.85}
-.db-s{background:var(–surface);border:1.5px solid var(–border);color:var(–ink2)}.db-s:hover{border-color:var(–at);color:var(–at)}
-
+.db{padding:9px 20px;border-radius:9px;border:none;font-family:'Nunito',sans-serif;font-size:.83rem;font-weight:800;cursor:pointer;transition:all .2s}
+.db-p{background:linear-gradient(135deg,var(--at),var(--in));color:#fff}.db-p:hover{opacity:.85}
+.db-s{background:var(--surface);border:1.5px solid var(--border);color:var(--ink2)}.db-s:hover{border-color:var(--at);color:var(--at)}
 @keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .qcard{animation:up .27s ease both}
 .qcard:nth-child(2){animation-delay:.04s}.qcard:nth-child(3){animation-delay:.08s}
@@ -256,813 +148,284 @@ cursor:pointer;transition:opacity .2s;white-space:nowrap;
 .qcard:nth-child(8){animation-delay:.28s}.qcard:nth-child(9){animation-delay:.32s}
 .qcard:nth-child(10){animation-delay:.36s}.qcard:nth-child(11){animation-delay:.40s}
 </style>
-
 </head>
 <body>
-
 <div class="hdr">
   <div class="hdr-icon">📍</div>
-  <div class="hdr-text">
-    <h1>AT &nbsp;·&nbsp; IN &nbsp;·&nbsp; ON</h1>
-    <p>Prepositions of Time & Place · Selección · Writing · Errores</p>
-  </div>
-  <div class="hdr-pts">
-    <div class="hdr-pts-num" id="g-pts">0</div>
-    <div class="hdr-pts-lbl">puntos</div>
-  </div>
+  <div class="hdr-text"><h1>AT &nbsp;·&nbsp; IN &nbsp;·&nbsp; ON</h1><p>Prepositions of Time & Place · Selección · Writing · Errores</p></div>
+  <div class="hdr-pts"><div class="hdr-pts-num" id="g-pts">0</div><div class="hdr-pts-lbl">puntos</div></div>
 </div>
-
-<!-- BIG 3 -->
-
 <div class="big3" id="big3">
-  <div class="b3 active-at" id="b3-0" onclick="switchBig(0)">
-    <div class="b3-word">AT</div>
-    <div class="b3-sub">Punto exacto</div>
-  </div>
-  <div class="b3" id="b3-1" onclick="switchBig(1)">
-    <div class="b3-word">IN</div>
-    <div class="b3-sub">Interior / período</div>
-  </div>
-  <div class="b3" id="b3-2" onclick="switchBig(2)">
-    <div class="b3-word">ON</div>
-    <div class="b3-sub">Superficie / día</div>
-  </div>
-  <div class="b3" id="b3-3" onclick="switchBig(3)">
-    <div class="b3-word">MIX</div>
-    <div class="b3-sub">Todos mezclados</div>
-  </div>
+  <div class="b3 active-at" id="b3-0" onclick="switchBig(0)"><div class="b3-word">AT</div><div class="b3-sub">Punto exacto</div></div>
+  <div class="b3" id="b3-1" onclick="switchBig(1)"><div class="b3-word">IN</div><div class="b3-sub">Interior / período</div></div>
+  <div class="b3" id="b3-2" onclick="switchBig(2)"><div class="b3-word">ON</div><div class="b3-sub">Superficie / día</div></div>
+  <div class="b3" id="b3-3" onclick="switchBig(3)"><div class="b3-word">MIX</div><div class="b3-sub">Todos mezclados</div></div>
 </div>
-
-<!-- SUBTABS -->
-
 <div class="stabs" id="stabs"></div>
 <div class="prog"><div class="pf" id="pf" style="width:0%"></div></div>
-
-<!-- SECTIONS -->
-
 <div id="sections"></div>
-
 <script>
-// ══════════════════════════════════════════════════════
-// DATA
-// ══════════════════════════════════════════════════════
-const DATA = [
-
-// ── AT ───────────────────────────────────────────────
-{
-  big:0, id:'at-time', label:'AT – Tiempo', stab:'at-s', color:'var(--at)',
-  qs:[
-    {type:'3btn',tag:'tg-at',lbl:'AT – Time',qtype:'Tiempo',
-     instr:'Choose the correct preposition:',
-     sent:'She wakes up _____ 6 o\'clock every morning.',sig:'specific time',
-     ans:'at',
-     cor:'She wakes up <strong>at</strong> 6 o\'clock.',
-     exp:'Use <strong>AT</strong> for exact times: at 6 o\'clock, at noon, at midnight, at 3:30 pm.',
-     rule:'<strong>AT</strong> + exact time (at 9am · at noon · at midnight)'},
-    {type:'mc',tag:'tg-at',lbl:'AT – Time',qtype:'Tiempo',
-     instr:'Choose the correct preposition:',
-     sent:'We always eat together _____ Christmas.',sig:'holiday / celebration',
-     opts:['at','in','on','during'],ans:0,
-     cor:'We eat together <strong>at</strong> Christmas.',
-     exp:'<strong>AT</strong> for holidays and celebrations: at Christmas, at Easter, at New Year, at Thanksgiving.',
-     rule:'<strong>AT</strong> + holidays (at Christmas · at Easter · at New Year)'},
-    {type:'write',tag:'tg-at',lbl:'AT – Time',qtype:'Escribir',
-     instr:'Complete with AT, IN, or ON:',
-     sent:'The meeting starts _____ noon. Don\'t be late!',sig:'noon',
-     hint:'noon = AT',
-     answers:['at'],
-     cor:'The meeting starts <strong>at</strong> noon.',
-     exp:'AT noon, AT midnight, AT midday — these are specific time points.',
-     rule:'<strong>AT</strong> noon · midnight · midday · the weekend (BrE)'},
-    {type:'3btn',tag:'tg-at',lbl:'AT – Time',qtype:'Tiempo',
-     instr:'Choose the correct preposition:',
-     sent:'I\'ll call you _____ the weekend.',sig:'weekend (BrE)',
-     ans:'at',
-     cor:'I\'ll call you <strong>at</strong> the weekend. (British English)',
-     exp:'<strong>AT the weekend</strong> (British English). Note: American English uses "ON the weekend."',
-     rule:'<strong>AT</strong> the weekend (BrE) / <strong>ON</strong> the weekend (AmE)'},
-    {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',
-     instr:'Find the INCORRECT sentence:',
-     sent:'Which sentence has an error?',sig:'AT – error',
-     opts:["She arrived at midnight.","The class starts at 8 in the morning.","He was born in 9 o'clock.","They met at lunchtime."],ans:2,
-     cor:'"He was born <strong>at</strong> 9 o\'clock."',
-     exp:'"In 9 o\'clock" is wrong. Exact times always use <strong>AT</strong>: at 9 o\'clock.',
-     rule:'<strong>AT</strong> + time — never IN with clock times'},
-    {type:'write',tag:'tg-at',lbl:'AT – Time',qtype:'Escribir',
-     instr:'Fill in the blank:',
-     sent:'She always feels lonely _____ night.',sig:'night',
-     hint:'at night (fixed expression)',
-     answers:['at'],
-     cor:'She always feels lonely <strong>at</strong> night.',
-     exp:'"<strong>At night</strong>" is a fixed expression. Also: at dawn, at dusk, at the moment.',
-     rule:'<strong>AT</strong> night · dawn · dusk · the moment · the same time'},
-  ]
-},
-{
-  big:0, id:'at-place', label:'AT – Lugar', stab:'at-s', color:'var(--at)',
-  qs:[
-    {type:'3btn',tag:'tg-at',lbl:'AT – Place',qtype:'Lugar',
-     instr:'Choose the correct preposition:',
-     sent:'I\'ll meet you _____ the bus stop.',sig:'specific point / location',
-     ans:'at',
-     cor:'I\'ll meet you <strong>at</strong> the bus stop.',
-     exp:'<strong>AT</strong> for a specific point or location: at the bus stop, at the door, at the corner.',
-     rule:'<strong>AT</strong> = specific point/location (at the door · at the corner · at the top)'},
-    {type:'mc',tag:'tg-at',lbl:'AT – Place',qtype:'Lugar',
-     instr:'Choose the correct preposition:',
-     sent:'She\'s studying _____ university right now.',sig:'institution / activity',
-     opts:['at','in','on','by'],ans:0,
-     cor:'She\'s studying <strong>at</strong> university.',
-     exp:'<strong>AT</strong> for institutions when referring to the activity/purpose: at school, at university, at work, at home.',
-     rule:'<strong>AT</strong> school · university · work · home · the office'},
-    {type:'write',tag:'tg-at',lbl:'AT – Place',qtype:'Escribir',
-     instr:'Fill in with AT, IN, or ON:',
-     sent:'Can you wait for me _____ the entrance?',sig:'entrance / point',
-     hint:'specific point = AT',
-     answers:['at'],
-     cor:'Can you wait for me <strong>at</strong> the entrance?',
-     exp:'<strong>AT</strong> the entrance = a specific point. Other points: at the door, at the gate, at the traffic lights.',
-     rule:'<strong>AT</strong> + specific point (entrance · exit · top · bottom · end)'},
-    {type:'3btn',tag:'tg-at',lbl:'AT – Place',qtype:'Lugar',
-     instr:'Choose the correct preposition:',
-     sent:'There were 500 people _____ the concert last night.',sig:'event / venue',
-     ans:'at',
-     cor:'There were 500 people <strong>at</strong> the concert.',
-     exp:'<strong>AT</strong> for events and venues: at the concert, at the party, at the airport, at the station.',
-     rule:'<strong>AT</strong> + events & venues (concert · party · airport · station)'},
-    {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',
-     instr:'Find the INCORRECT sentence:',
-     sent:'Which one has an error?',sig:'AT place – error',
-     opts:["She's at home studying.","He works at the hospital.","I left my bag in the bus stop.","Meet me at the corner of 5th and Main."],ans:2,
-     cor:'"I left my bag <strong>at</strong> the bus stop."',
-     exp:'"In the bus stop" is wrong. Bus stop is a point, not an enclosed space → <strong>AT</strong>.',
-     rule:'Bus stop · corner · door → specific points → <strong>AT</strong>'},
-    {type:'write',tag:'tg-at',lbl:'AT – Place',qtype:'Escribir',
-     instr:'Complete the sentence:',
-     sent:'I\'ll see you _____ the airport at 7pm.',sig:'airport / point',
-     hint:'airport = AT',
-     answers:['at'],
-     cor:'I\'ll see you <strong>at</strong> the airport.',
-     exp:'Airports, stations and similar venues → <strong>AT</strong>: at the airport, at the train station.',
-     rule:'<strong>AT</strong> the airport · station · hotel · hospital (as visitor)'},
-  ]
-},
-
-// ── IN ───────────────────────────────────────────────
-{
-  big:1, id:'in-time', label:'IN – Tiempo', stab:'in-s', color:'var(--in)',
-  qs:[
-    {type:'3btn',tag:'tg-in',lbl:'IN – Time',qtype:'Tiempo',
-     instr:'Choose the correct preposition:',
-     sent:'She was born _____ 1995.',sig:'year',
-     ans:'in',
-     cor:'She was born <strong>in</strong> 1995.',
-     exp:'<strong>IN</strong> for years, months, seasons and longer periods: in 1995, in March, in summer, in the 20th century.',
-     rule:'<strong>IN</strong> + year · month · season · century (in 2024 · in July · in summer)'},
-    {type:'mc',tag:'tg-in',lbl:'IN – Time',qtype:'Tiempo',
-     instr:'Choose the correct preposition:',
-     sent:'The flowers bloom _____ spring.',sig:'season',
-     opts:['in','at','on','during'],ans:0,
-     cor:'The flowers bloom <strong>in</strong> spring.',
-     exp:'<strong>IN</strong> for seasons: in spring, in summer, in autumn/fall, in winter.',
-     rule:'<strong>IN</strong> + seasons (in spring · summer · autumn · winter)'},
-    {type:'write',tag:'tg-in',lbl:'IN – Time',qtype:'Escribir',
-     instr:'Fill in with AT, IN, or ON:',
-     sent:'I usually go on vacation _____ August.',sig:'month',
-     hint:'month = IN',
-     answers:['in'],
-     cor:'I go on vacation <strong>in</strong> August.',
-     exp:'<strong>IN</strong> for months: in January, in February... in December.',
-     rule:'<strong>IN</strong> + month (in January · in August · in December)'},
-    {type:'3btn',tag:'tg-in',lbl:'IN – Time',qtype:'Tiempo',
-     instr:'Choose the correct preposition:',
-     sent:'I\'ll finish this project _____ two hours.',sig:'in + duration',
-     ans:'in',
-     cor:'I\'ll finish this <strong>in</strong> two hours.',
-     exp:'"<strong>In</strong> + time" = after a period of time from now. Different from "for" (duration). "I\'ll be back in 10 minutes."',
-     rule:'<strong>IN</strong> + time = after a period (in 2 hours · in a week · in a moment)'},
-    {type:'mc',tag:'tg-in',lbl:'IN – Time',qtype:'Tiempo',
-     instr:'Choose the correct preposition:',
-     sent:'She usually reads _____ the morning.',sig:'part of day',
-     opts:['in','at','on','by'],ans:0,
-     cor:'She usually reads <strong>in</strong> the morning.',
-     exp:'<strong>IN</strong> for parts of the day: in the morning, in the afternoon, in the evening. EXCEPT: at night.',
-     rule:'<strong>IN</strong> the morning · afternoon · evening (but: <strong>AT</strong> night)'},
-    {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',
-     instr:'Find the INCORRECT sentence:',
-     sent:'Which sentence has an error?',sig:'IN time – error',
-     opts:["She graduated in 2018.","We always eat dinner in the evening.","He was born on summer.","The project will be ready in three days."],ans:2,
-     cor:'"He was born <strong>in</strong> summer."',
-     exp:'"On summer" is wrong. Seasons → <strong>IN</strong>: in summer, in winter.',
-     rule:'Seasons → <strong>IN</strong>, never ON'},
-    {type:'write',tag:'tg-in',lbl:'IN – Time',qtype:'Escribir',
-     instr:'Complete with the correct preposition:',
-     sent:'The company was founded _____ the 1990s.',sig:'decade / period',
-     hint:'decade = IN',
-     answers:['in'],
-     cor:'The company was founded <strong>in</strong> the 1990s.',
-     exp:'<strong>IN</strong> for decades and centuries: in the 1990s, in the 21st century.',
-     rule:'<strong>IN</strong> + decade · century (in the 90s · in the 20th century)'},
-  ]
-},
-{
-  big:1, id:'in-place', label:'IN – Lugar', stab:'in-s', color:'var(--in)',
-  qs:[
-    {type:'3btn',tag:'tg-in',lbl:'IN – Place',qtype:'Lugar',
-     instr:'Choose the correct preposition:',
-     sent:'She lives _____ Costa Rica.',sig:'country / enclosed area',
-     ans:'in',
-     cor:'She lives <strong>in</strong> Costa Rica.',
-     exp:'<strong>IN</strong> for enclosed areas: countries, cities, rooms, buildings, boxes.',
-     rule:'<strong>IN</strong> = enclosed area (country · city · room · building · box)'},
-    {type:'mc',tag:'tg-in',lbl:'IN – Place',qtype:'Lugar',
-     instr:'Choose the correct preposition:',
-     sent:'The keys are _____ my bag.',sig:'inside / container',
-     opts:['in','at','on','inside'],ans:0,
-     cor:'The keys are <strong>in</strong> my bag.',
-     exp:'<strong>IN</strong> when something is inside a container or enclosed space.',
-     rule:'<strong>IN</strong> my bag · pocket · box · drawer · room'},
-    {type:'write',tag:'tg-in',lbl:'IN – Place',qtype:'Escribir',
-     instr:'Fill in with AT, IN, or ON:',
-     sent:'He works _____ a big office _____ downtown San José.',sig:'city / building',
-     hint:'office = IN / city = IN',
-     answers:['in / in'],
-     cor:'He works <strong>in</strong> a big office <strong>in</strong> downtown San José.',
-     exp:'<strong>IN</strong> for buildings (in the office) and <strong>IN</strong> for cities (in San José).',
-     rule:'<strong>IN</strong> a building / city / country'},
-    {type:'3btn',tag:'tg-in',lbl:'IN – Place',qtype:'Lugar',
-     instr:'Choose the correct preposition:',
-     sent:'She\'s swimming _____ the pool right now.',sig:'pool / enclosed space',
-     ans:'in',
-     cor:'She\'s swimming <strong>in</strong> the pool.',
-     exp:'<strong>IN</strong> for water and enclosed spaces: in the pool, in the sea, in the river, in the lake.',
-     rule:'<strong>IN</strong> the pool · sea · river · ocean (inside water)'},
-    {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',
-     instr:'Find the INCORRECT sentence:',
-     sent:'Which one has an error?',sig:'IN place – error',
-     opts:["She's in the kitchen.","He's waiting in the bus stop.","The cat is in the garden.","They live in a small town."],ans:1,
-     cor:'"He\'s waiting <strong>at</strong> the bus stop."',
-     exp:'Bus stop = a specific point, not an enclosed space → <strong>AT</strong>, not IN.',
-     rule:'Bus stop / corner / door = point → <strong>AT</strong> (not IN)'},
-    {type:'write',tag:'tg-in',lbl:'IN – Place',qtype:'Escribir',
-     instr:'Complete the sentence:',
-     sent:'I saw her _____ the street. She was walking fast.',sig:'street / area',
-     hint:'in the street (BrE) / on the street (AmE)',
-     answers:['in','on'],
-     cor:'I saw her <strong>in</strong> the street. (BrE) / <strong>on</strong> the street. (AmE)',
-     exp:'Both are correct: <strong>IN the street</strong> (British) or <strong>ON the street</strong> (American). The key is: not AT.',
-     rule:'<strong>IN/ON</strong> the street (BrE/AmE) — both acceptable'},
-  ]
-},
-
-// ── ON ───────────────────────────────────────────────
-{
-  big:2, id:'on-time', label:'ON – Tiempo', stab:'on-s', color:'var(--on)',
-  qs:[
-    {type:'3btn',tag:'tg-on',lbl:'ON – Time',qtype:'Tiempo',
-     instr:'Choose the correct preposition:',
-     sent:'I have a doctor\'s appointment _____ Monday.',sig:'day of week',
-     ans:'on',
-     cor:'I have an appointment <strong>on</strong> Monday.',
-     exp:'<strong>ON</strong> for days of the week: on Monday, on Tuesday, on Wednesday... on Sunday.',
-     rule:'<strong>ON</strong> + day of week (on Monday · Tuesday · Wednesday...)'},
-    {type:'mc',tag:'tg-on',lbl:'ON – Time',qtype:'Tiempo',
-     instr:'Choose the correct preposition:',
-     sent:'She was born _____ June 15th.',sig:'specific date',
-     opts:['on','in','at','by'],ans:0,
-     cor:'She was born <strong>on</strong> June 15th.',
-     exp:'<strong>ON</strong> for specific dates: on June 15th, on the 3rd of March, on Christmas Day.',
-     rule:'<strong>ON</strong> + specific date (on June 15th · on the 3rd · on Christmas Day)'},
-    {type:'write',tag:'tg-on',lbl:'ON – Time',qtype:'Escribir',
-     instr:'Fill in with AT, IN, or ON:',
-     sent:'We always go to church _____ Sunday mornings.',sig:'day + part of day',
-     hint:'ON Sunday morning',
-     answers:['on'],
-     cor:'We go to church <strong>on</strong> Sunday mornings.',
-     exp:'"<strong>On</strong> + day + morning/afternoon/evening" (not IN). ON Sunday morning, ON Friday evening.',
-     rule:'<strong>ON</strong> Monday/Tuesday morning · afternoon · evening'},
-    {type:'3btn',tag:'tg-on',lbl:'ON – Time',qtype:'Tiempo',
-     instr:'Choose the correct preposition:',
-     sent:'The store is open _____ weekdays but closed on Sundays.',sig:'weekday',
-     ans:'on',
-     cor:'The store is open <strong>on</strong> weekdays.',
-     exp:'<strong>ON</strong> weekdays, on weekends (AmE), on Saturdays, on public holidays.',
-     rule:'<strong>ON</strong> weekdays · weekends (AmE) · public holidays'},
-    {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',
-     instr:'Find the INCORRECT sentence:',
-     sent:'Which sentence has an error?',sig:'ON time – error',
-     opts:["The party is on Saturday evening.","She called me on my birthday.","I was born in 15th March.","He always jogs on Sunday mornings."],ans:2,
-     cor:'"I was born <strong>on</strong> 15th March."',
-     exp:'"In 15th March" is wrong. Specific dates → <strong>ON</strong>: on the 15th of March.',
-     rule:'Specific date → <strong>ON</strong>, never IN'},
-    {type:'write',tag:'tg-on',lbl:'ON – Time',qtype:'Escribir',
-     instr:'Complete the sentence:',
-     sent:'The final exam is _____ December 20th. Study hard!',sig:'specific date',
-     hint:'ON + date',
-     answers:['on'],
-     cor:'The final exam is <strong>on</strong> December 20th.',
-     exp:'<strong>ON</strong> for specific dates: on December 20th, on the 20th of December.',
-     rule:'<strong>ON</strong> + date (on December 20th)'},
-  ]
-},
-{
-  big:2, id:'on-place', label:'ON – Lugar', stab:'on-s', color:'var(--on)',
-  qs:[
-    {type:'3btn',tag:'tg-on',lbl:'ON – Place',qtype:'Lugar',
-     instr:'Choose the correct preposition:',
-     sent:'The book is _____ the table.',sig:'surface',
-     ans:'on',
-     cor:'The book is <strong>on</strong> the table.',
-     exp:'<strong>ON</strong> for surfaces: on the table, on the floor, on the wall, on the ceiling.',
-     rule:'<strong>ON</strong> = surface (on the table · floor · wall · shelf · page)'},
-    {type:'mc',tag:'tg-on',lbl:'ON – Place',qtype:'Lugar',
-     instr:'Choose the correct preposition:',
-     sent:'There\'s a beautiful painting _____ the wall.',sig:'wall / surface',
-     opts:['on','in','at','by'],ans:0,
-     cor:'There\'s a painting <strong>on</strong> the wall.',
-     exp:'<strong>ON</strong> for surfaces. Also: on the ceiling, on the roof, on the screen.',
-     rule:'<strong>ON</strong> the wall · ceiling · screen · board · page'},
-    {type:'write',tag:'tg-on',lbl:'ON – Place',qtype:'Escribir',
-     instr:'Fill in with AT, IN, or ON:',
-     sent:'Your appointment is _____ the third floor.',sig:'floor / level',
-     hint:'floor = ON',
-     answers:['on'],
-     cor:'Your appointment is <strong>on</strong> the third floor.',
-     exp:'<strong>ON</strong> for floors/levels: on the first floor, on the ground floor.',
-     rule:'<strong>ON</strong> the 1st · 2nd · 3rd floor · ground floor'},
-    {type:'3btn',tag:'tg-on',lbl:'ON – Place',qtype:'Lugar',
-     instr:'Choose the correct preposition:',
-     sent:'She lives _____ the coast of Costa Rica.',sig:'coast / border',
-     ans:'on',
-     cor:'She lives <strong>on</strong> the coast.',
-     exp:'<strong>ON</strong> for lines and edges: on the coast, on the border, on the edge, on the river (bank).',
-     rule:'<strong>ON</strong> the coast · border · edge · left/right (side)'},
-    {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',
-     instr:'Find the INCORRECT sentence:',
-     sent:'Which one has an error?',sig:'ON place – error',
-     opts:["She sat on the grass.","The cat jumped on the sofa.","He lives in the second floor.","There's a spider on the ceiling."],ans:2,
-     cor:'"He lives <strong>on</strong> the second floor."',
-     exp:'"In the second floor" is wrong. Floors/levels → <strong>ON</strong>.',
-     rule:'<strong>ON</strong> the floor (level) — never IN the floor'},
-    {type:'write',tag:'tg-on',lbl:'ON – Place',qtype:'Escribir',
-     instr:'Complete with the correct preposition:',
-     sent:'The answer is _____ page 47.',sig:'page',
-     hint:'page = ON (surface)',
-     answers:['on'],
-     cor:'The answer is <strong>on</strong> page 47.',
-     exp:'"<strong>On</strong> page 47" = the page is a surface where the text sits.',
-     rule:'<strong>ON</strong> page (number) · the screen · the right/left'},
-  ]
-},
-
-// ── MIX ──────────────────────────────────────────────
-{
-  big:3, id:'mix-time', label:'Mix – Tiempo', stab:'mix-s', color:'var(--mix)',
-  qs:[
-    {type:'3btn',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Tiempo Mix',
-     instr:'Which preposition is correct?',
-     sent:'The concert is _____ Saturday night.',sig:'day + night',
-     ans:'on',
-     cor:'The concert is <strong>on</strong> Saturday night.',
-     exp:'<strong>ON</strong> Saturday (day) + night. When you have a day + part of day, use ON.',
-     rule:'<strong>ON</strong> + day + morning/afternoon/evening/night'},
-    {type:'3btn',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Tiempo Mix',
-     instr:'Which preposition is correct?',
-     sent:'He was born _____ the 1980s.',sig:'decade',
-     ans:'in',
-     cor:'He was born <strong>in</strong> the 1980s.',
-     exp:'<strong>IN</strong> for decades and centuries.',
-     rule:'<strong>IN</strong> the 1980s · 1990s · 21st century'},
-    {type:'mc',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Tiempo Mix',
-     instr:'Choose all three correctly:',
-     sent:'I wake up _____ 7am _____ Monday mornings, especially _____ winter.',sig:'time+day+season',
-     opts:['at / on / in','in / on / at','on / at / in','at / in / on'],ans:0,
-     cor:'I wake up <strong>at</strong> 7am <strong>on</strong> Monday mornings, especially <strong>in</strong> winter.',
-     exp:'AT + exact time · ON + day · IN + season. This is the classic combo!',
-     rule:'<strong>AT</strong> time · <strong>ON</strong> day · <strong>IN</strong> month/season/year'},
-    {type:'write',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Escribir',
-     instr:'Fill in with AT, IN, or ON:',
-     sent:'She was born _____ 1998, _____ a Tuesday, _____ 11 pm.',sig:'year/day/time',
-     hint:'year→IN / day→ON / time→AT',
-     answers:['in / on / at'],
-     cor:'She was born <strong>in</strong> 1998, <strong>on</strong> a Tuesday, <strong>at</strong> 11 pm.',
-     exp:'The classic trio: IN year, ON day, AT time.',
-     rule:'<strong>IN</strong> year · <strong>ON</strong> day · <strong>AT</strong> exact time'},
-    {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',
-     instr:'Find the sentence with an error:',
-     sent:'Which one is INCORRECT?',sig:'time mix – error',
-     opts:["She called me at midnight.","The wedding is on July 4th.","I usually exercise in the morning.","Let's meet in 3 o'clock."],ans:3,
-     cor:'"Let\'s meet <strong>at</strong> 3 o\'clock."',
-     exp:'"In 3 o\'clock" is wrong. Exact times → <strong>AT</strong>.',
-     rule:'<strong>AT</strong> + clock time — never IN with times'},
-    {type:'write',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Escribir',
-     instr:'Complete with AT, IN, or ON:',
-     sent:'The store opens _____ 9am _____ weekdays and closes _____ 6pm.',sig:'time+day+time',
-     hint:'9am→AT / weekdays→ON / 6pm→AT',
-     answers:['at / on / at'],
-     cor:'The store opens <strong>at</strong> 9am <strong>on</strong> weekdays and closes <strong>at</strong> 6pm.',
-     exp:'AT for times, ON for days/weekdays.',
-     rule:'<strong>AT</strong> + time · <strong>ON</strong> + day'},
-  ]
-},
-{
-  big:3, id:'mix-place', label:'Mix – Lugar', stab:'mix-s', color:'var(--mix)',
-  qs:[
-    {type:'3btn',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Lugar Mix',
-     instr:'Which preposition is correct?',
-     sent:'I left my phone _____ home.',sig:'home',
-     ans:'at',
-     cor:'I left my phone <strong>at</strong> home.',
-     exp:'"<strong>At</strong> home" is a fixed expression. Also: at work, at school, at the office.',
-     rule:'<strong>AT</strong> home · work · school · the office (fixed expressions)'},
-    {type:'mc',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Lugar Mix',
-     instr:'Choose the correct preposition:',
-     sent:'She sat _____ the chair and opened her laptop.',sig:'surface / position',
-     opts:['on','in','at','by'],ans:0,
-     cor:'She sat <strong>on</strong> the chair.',
-     exp:'<strong>ON</strong> the chair (surface). BUT: <strong>IN</strong> the armchair / in the sofa (when you sink in). Generally: sit on a chair, sit in an armchair.',
-     rule:'Sit <strong>ON</strong> a chair · bench / Sit <strong>IN</strong> an armchair · sofa'},
-    {type:'write',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Escribir',
-     instr:'Fill in: AT, IN, or ON?',
-     sent:'He works _____ the hospital but lives _____ the suburbs.',sig:'building/area',
-     hint:'hospital→AT (activity) / suburbs→IN (area)',
-     answers:['at / in'],
-     cor:'He works <strong>at</strong> the hospital but lives <strong>in</strong> the suburbs.',
-     exp:'AT hospital (purpose/activity) vs IN the suburbs (enclosed area).',
-     rule:'<strong>AT</strong> the hospital (visiting/working) · <strong>IN</strong> the suburbs'},
-    {type:'3btn',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Lugar Mix',
-     instr:'Which preposition is correct?',
-     sent:'The cat is sitting _____ the roof.',sig:'roof / surface',
-     ans:'on',
-     cor:'The cat is sitting <strong>on</strong> the roof.',
-     exp:'<strong>ON</strong> the roof = on top of the surface.',
-     rule:'<strong>ON</strong> the roof · ceiling · floor (surface)'},
-    {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',
-     instr:'Find the INCORRECT sentence:',
-     sent:'Which one has an error?',sig:'place mix – error',
-     opts:["She's in the garden.","He's at the cinema watching a film.","The post office is in the left.","My keys are on the kitchen counter."],ans:2,
-     cor:'"The post office is <strong>on</strong> the left."',
-     exp:'"In the left" is wrong. Directions/sides → <strong>ON</strong>: on the left, on the right.',
-     rule:'<strong>ON</strong> the left · right · top · bottom side'},
-    {type:'mc',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Lugar Mix',
-     instr:'Choose the correct options:',
-     sent:'"Are you _____ the office?" "No, I\'m _____ a taxi, almost _____ the parking lot."',sig:'office/taxi/point',
-     opts:['at / in / at','in / in / in','at / at / on','on / in / at'],ans:0,
-     cor:'<strong>at</strong> the office / <strong>in</strong> a taxi / <strong>at</strong> the parking lot.',
-     exp:'AT office (activity point) · IN taxi (enclosed vehicle) · AT parking lot (specific location/point).',
-     rule:'<strong>IN</strong> a car/taxi/bus · <strong>AT</strong> a location'},
-  ]
-},
+var DATA=[
+{big:0,id:'at-time',label:'AT – Tiempo',stab:'at-s',color:'var(--at)',
+qs:[
+  {type:'3btn',tag:'tg-at',lbl:'AT – Time',qtype:'Tiempo',instr:'Choose the correct preposition:',sent:"She wakes up _____ 6 o'clock every morning.",sig:'specific time',ans:'at',cor:'She wakes up <strong>at</strong> 6 o\'clock.',exp:'Use <strong>AT</strong> for exact times: at 6 o\'clock, at noon, at midnight, at 3:30 pm.',rule:'<strong>AT</strong> + exact time (at 9am · at noon · at midnight)'},
+  {type:'mc',tag:'tg-at',lbl:'AT – Time',qtype:'Tiempo',instr:'Choose the correct preposition:',sent:'We always eat together _____ Christmas.',sig:'holiday / celebration',opts:['at','in','on','during'],ans:0,cor:'We eat together <strong>at</strong> Christmas.',exp:'<strong>AT</strong> for holidays and celebrations: at Christmas, at Easter, at New Year.',rule:'<strong>AT</strong> + holidays (at Christmas · at Easter · at New Year)'},
+  {type:'write',tag:'tg-at',lbl:'AT – Time',qtype:'Escribir',instr:"Complete with AT, IN, or ON:",sent:"The meeting starts _____ noon. Don't be late!",sig:'noon',hint:'noon = AT',answers:['at'],cor:'The meeting starts <strong>at</strong> noon.',exp:'AT noon, AT midnight, AT midday — these are specific time points.',rule:'<strong>AT</strong> noon · midnight · midday · the weekend (BrE)'},
+  {type:'3btn',tag:'tg-at',lbl:'AT – Time',qtype:'Tiempo',instr:'Choose the correct preposition:',sent:"I'll call you _____ the weekend.",sig:'weekend (BrE)',ans:'at',cor:"I'll call you <strong>at</strong> the weekend. (British English)",exp:'<strong>AT the weekend</strong> (British English). Note: American English uses "ON the weekend."',rule:'<strong>AT</strong> the weekend (BrE) / <strong>ON</strong> the weekend (AmE)'},
+  {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',instr:'Find the INCORRECT sentence:',sent:'Which sentence has an error?',sig:'AT – error',opts:["She arrived at midnight.","The class starts at 8 in the morning.","He was born in 9 o'clock.","They met at lunchtime."],ans:2,cor:'"He was born <strong>at</strong> 9 o\'clock."',exp:'"In 9 o\'clock" is wrong. Exact times always use <strong>AT</strong>.',rule:'<strong>AT</strong> + time — never IN with clock times'},
+  {type:'write',tag:'tg-at',lbl:'AT – Time',qtype:'Escribir',instr:'Fill in the blank:',sent:'She always feels lonely _____ night.',sig:'night',hint:'at night (fixed expression)',answers:['at'],cor:'She always feels lonely <strong>at</strong> night.',exp:'"<strong>At night</strong>" is a fixed expression. Also: at dawn, at dusk, at the moment.',rule:'<strong>AT</strong> night · dawn · dusk · the moment · the same time'}
+]},
+{big:0,id:'at-place',label:'AT – Lugar',stab:'at-s',color:'var(--at)',
+qs:[
+  {type:'3btn',tag:'tg-at',lbl:'AT – Place',qtype:'Lugar',instr:'Choose the correct preposition:',sent:"I'll meet you _____ the bus stop.",sig:'specific point / location',ans:'at',cor:"I'll meet you <strong>at</strong> the bus stop.",exp:'<strong>AT</strong> for a specific point or location: at the bus stop, at the door, at the corner.',rule:'<strong>AT</strong> = specific point/location (at the door · at the corner · at the top)'},
+  {type:'mc',tag:'tg-at',lbl:'AT – Place',qtype:'Lugar',instr:'Choose the correct preposition:',sent:"She's studying _____ university right now.",sig:'institution / activity',opts:['at','in','on','by'],ans:0,cor:"She's studying <strong>at</strong> university.",exp:'<strong>AT</strong> for institutions when referring to the activity/purpose: at school, at university, at work, at home.',rule:'<strong>AT</strong> school · university · work · home · the office'},
+  {type:'write',tag:'tg-at',lbl:'AT – Place',qtype:'Escribir',instr:'Fill in with AT, IN, or ON:',sent:'Can you wait for me _____ the entrance?',sig:'entrance / point',hint:'specific point = AT',answers:['at'],cor:'Can you wait for me <strong>at</strong> the entrance?',exp:'<strong>AT</strong> the entrance = a specific point.',rule:'<strong>AT</strong> + specific point (entrance · exit · top · bottom · end)'},
+  {type:'3btn',tag:'tg-at',lbl:'AT – Place',qtype:'Lugar',instr:'Choose the correct preposition:',sent:'There were 500 people _____ the concert last night.',sig:'event / venue',ans:'at',cor:'There were 500 people <strong>at</strong> the concert.',exp:'<strong>AT</strong> for events and venues: at the concert, at the party, at the airport.',rule:'<strong>AT</strong> + events & venues (concert · party · airport · station)'},
+  {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',instr:'Find the INCORRECT sentence:',sent:'Which one has an error?',sig:'AT place – error',opts:["She's at home studying.","He works at the hospital.","I left my bag in the bus stop.","Meet me at the corner of 5th and Main."],ans:2,cor:'"I left my bag <strong>at</strong> the bus stop."',exp:'"In the bus stop" is wrong. Bus stop is a point, not an enclosed space → <strong>AT</strong>.',rule:'Bus stop · corner · door → specific points → <strong>AT</strong>'},
+  {type:'write',tag:'tg-at',lbl:'AT – Place',qtype:'Escribir',instr:'Complete the sentence:',sent:"I'll see you _____ the airport at 7pm.",sig:'airport / point',hint:'airport = AT',answers:['at'],cor:"I'll see you <strong>at</strong> the airport.",exp:'Airports, stations and similar venues → <strong>AT</strong>.',rule:'<strong>AT</strong> the airport · station · hotel · hospital (as visitor)'}
+]},
+{big:1,id:'in-time',label:'IN – Tiempo',stab:'in-s',color:'var(--in)',
+qs:[
+  {type:'3btn',tag:'tg-in',lbl:'IN – Time',qtype:'Tiempo',instr:'Choose the correct preposition:',sent:'She was born _____ 1995.',sig:'year',ans:'in',cor:'She was born <strong>in</strong> 1995.',exp:'<strong>IN</strong> for years, months, seasons and longer periods: in 1995, in March, in summer.',rule:'<strong>IN</strong> + year · month · season · century (in 2024 · in July · in summer)'},
+  {type:'mc',tag:'tg-in',lbl:'IN – Time',qtype:'Tiempo',instr:'Choose the correct preposition:',sent:'The flowers bloom _____ spring.',sig:'season',opts:['in','at','on','during'],ans:0,cor:'The flowers bloom <strong>in</strong> spring.',exp:'<strong>IN</strong> for seasons: in spring, in summer, in autumn/fall, in winter.',rule:'<strong>IN</strong> + seasons (in spring · summer · autumn · winter)'},
+  {type:'write',tag:'tg-in',lbl:'IN – Time',qtype:'Escribir',instr:'Fill in with AT, IN, or ON:',sent:'I usually go on vacation _____ August.',sig:'month',hint:'month = IN',answers:['in'],cor:'I go on vacation <strong>in</strong> August.',exp:'<strong>IN</strong> for months: in January, in February... in December.',rule:'<strong>IN</strong> + month (in January · in August · in December)'},
+  {type:'3btn',tag:'tg-in',lbl:'IN – Time',qtype:'Tiempo',instr:'Choose the correct preposition:',sent:"I'll finish this project _____ two hours.",sig:'in + duration',ans:'in',cor:"I'll finish this <strong>in</strong> two hours.",exp:'"<strong>In</strong> + time" = after a period of time from now.',rule:'<strong>IN</strong> + time = after a period (in 2 hours · in a week · in a moment)'},
+  {type:'mc',tag:'tg-in',lbl:'IN – Time',qtype:'Tiempo',instr:'Choose the correct preposition:',sent:'She usually reads _____ the morning.',sig:'part of day',opts:['in','at','on','by'],ans:0,cor:'She usually reads <strong>in</strong> the morning.',exp:'<strong>IN</strong> for parts of the day: in the morning, in the afternoon, in the evening. EXCEPT: at night.',rule:'<strong>IN</strong> the morning · afternoon · evening (but: <strong>AT</strong> night)'},
+  {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',instr:'Find the INCORRECT sentence:',sent:'Which sentence has an error?',sig:'IN time – error',opts:["She graduated in 2018.","We always eat dinner in the evening.","He was born on summer.","The project will be ready in three days."],ans:2,cor:'"He was born <strong>in</strong> summer."',exp:'"On summer" is wrong. Seasons → <strong>IN</strong>: in summer, in winter.',rule:'Seasons → <strong>IN</strong>, never ON'},
+  {type:'write',tag:'tg-in',lbl:'IN – Time',qtype:'Escribir',instr:'Complete with the correct preposition:',sent:'The company was founded _____ the 1990s.',sig:'decade / period',hint:'decade = IN',answers:['in'],cor:'The company was founded <strong>in</strong> the 1990s.',exp:'<strong>IN</strong> for decades and centuries: in the 1990s, in the 21st century.',rule:'<strong>IN</strong> + decade · century (in the 90s · in the 20th century)'}
+]},
+{big:1,id:'in-place',label:'IN – Lugar',stab:'in-s',color:'var(--in)',
+qs:[
+  {type:'3btn',tag:'tg-in',lbl:'IN – Place',qtype:'Lugar',instr:'Choose the correct preposition:',sent:'She lives _____ Costa Rica.',sig:'country / enclosed area',ans:'in',cor:'She lives <strong>in</strong> Costa Rica.',exp:'<strong>IN</strong> for enclosed areas: countries, cities, rooms, buildings, boxes.',rule:'<strong>IN</strong> = enclosed area (country · city · room · building · box)'},
+  {type:'mc',tag:'tg-in',lbl:'IN – Place',qtype:'Lugar',instr:'Choose the correct preposition:',sent:'The keys are _____ my bag.',sig:'inside / container',opts:['in','at','on','inside'],ans:0,cor:'The keys are <strong>in</strong> my bag.',exp:'<strong>IN</strong> when something is inside a container or enclosed space.',rule:'<strong>IN</strong> my bag · pocket · box · drawer · room'},
+  {type:'write',tag:'tg-in',lbl:'IN – Place',qtype:'Escribir',instr:'Fill in with AT, IN, or ON:',sent:'He works _____ a big office _____ downtown San José.',sig:'city / building',hint:'office = IN / city = IN',answers:['in / in'],cor:'He works <strong>in</strong> a big office <strong>in</strong> downtown San José.',exp:'<strong>IN</strong> for buildings and <strong>IN</strong> for cities.',rule:'<strong>IN</strong> a building / city / country'},
+  {type:'3btn',tag:'tg-in',lbl:'IN – Place',qtype:'Lugar',instr:'Choose the correct preposition:',sent:"She's swimming _____ the pool right now.",sig:'pool / enclosed space',ans:'in',cor:"She's swimming <strong>in</strong> the pool.",exp:'<strong>IN</strong> for water and enclosed spaces: in the pool, in the sea, in the river.',rule:'<strong>IN</strong> the pool · sea · river · ocean (inside water)'},
+  {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',instr:'Find the INCORRECT sentence:',sent:'Which one has an error?',sig:'IN place – error',opts:["She's in the kitchen.","He's waiting in the bus stop.","The cat is in the garden.","They live in a small town."],ans:1,cor:'"He\'s waiting <strong>at</strong> the bus stop."',exp:'Bus stop = a specific point, not an enclosed space → <strong>AT</strong>, not IN.',rule:'Bus stop / corner / door = point → <strong>AT</strong> (not IN)'},
+  {type:'write',tag:'tg-in',lbl:'IN – Place',qtype:'Escribir',instr:'Complete the sentence:',sent:'I saw her _____ the street. She was walking fast.',sig:'street / area',hint:'in the street (BrE) / on the street (AmE)',answers:['in','on'],cor:'I saw her <strong>in</strong> the street. (BrE) / <strong>on</strong> the street. (AmE)',exp:'Both are correct: <strong>IN the street</strong> (British) or <strong>ON the street</strong> (American).',rule:'<strong>IN/ON</strong> the street (BrE/AmE) — both acceptable'}
+]},
+{big:2,id:'on-time',label:'ON – Tiempo',stab:'on-s',color:'var(--on)',
+qs:[
+  {type:'3btn',tag:'tg-on',lbl:'ON – Time',qtype:'Tiempo',instr:'Choose the correct preposition:',sent:"I have a doctor's appointment _____ Monday.",sig:'day of week',ans:'on',cor:'I have an appointment <strong>on</strong> Monday.',exp:'<strong>ON</strong> for days of the week: on Monday, on Tuesday, on Wednesday... on Sunday.',rule:'<strong>ON</strong> + day of week (on Monday · Tuesday · Wednesday...)'},
+  {type:'mc',tag:'tg-on',lbl:'ON – Time',qtype:'Tiempo',instr:'Choose the correct preposition:',sent:'She was born _____ June 15th.',sig:'specific date',opts:['on','in','at','by'],ans:0,cor:'She was born <strong>on</strong> June 15th.',exp:'<strong>ON</strong> for specific dates: on June 15th, on the 3rd of March, on Christmas Day.',rule:'<strong>ON</strong> + specific date (on June 15th · on the 3rd · on Christmas Day)'},
+  {type:'write',tag:'tg-on',lbl:'ON – Time',qtype:'Escribir',instr:'Fill in with AT, IN, or ON:',sent:'We always go to church _____ Sunday mornings.',sig:'day + part of day',hint:'ON Sunday morning',answers:['on'],cor:'We go to church <strong>on</strong> Sunday mornings.',exp:'"<strong>On</strong> + day + morning/afternoon/evening" (not IN).',rule:'<strong>ON</strong> Monday/Tuesday morning · afternoon · evening'},
+  {type:'3btn',tag:'tg-on',lbl:'ON – Time',qtype:'Tiempo',instr:'Choose the correct preposition:',sent:'The store is open _____ weekdays but closed on Sundays.',sig:'weekday',ans:'on',cor:'The store is open <strong>on</strong> weekdays.',exp:'<strong>ON</strong> weekdays, on weekends (AmE), on Saturdays, on public holidays.',rule:'<strong>ON</strong> weekdays · weekends (AmE) · public holidays'},
+  {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',instr:'Find the INCORRECT sentence:',sent:'Which sentence has an error?',sig:'ON time – error',opts:["The party is on Saturday evening.","She called me on my birthday.","I was born in 15th March.","He always jogs on Sunday mornings."],ans:2,cor:'"I was born <strong>on</strong> 15th March."',exp:'"In 15th March" is wrong. Specific dates → <strong>ON</strong>.',rule:'Specific date → <strong>ON</strong>, never IN'},
+  {type:'write',tag:'tg-on',lbl:'ON – Time',qtype:'Escribir',instr:'Complete the sentence:',sent:'The final exam is _____ December 20th. Study hard!',sig:'specific date',hint:'ON + date',answers:['on'],cor:'The final exam is <strong>on</strong> December 20th.',exp:'<strong>ON</strong> for specific dates: on December 20th.',rule:'<strong>ON</strong> + date (on December 20th)'}
+]},
+{big:2,id:'on-place',label:'ON – Lugar',stab:'on-s',color:'var(--on)',
+qs:[
+  {type:'3btn',tag:'tg-on',lbl:'ON – Place',qtype:'Lugar',instr:'Choose the correct preposition:',sent:'The book is _____ the table.',sig:'surface',ans:'on',cor:'The book is <strong>on</strong> the table.',exp:'<strong>ON</strong> for surfaces: on the table, on the floor, on the wall, on the ceiling.',rule:'<strong>ON</strong> = surface (on the table · floor · wall · shelf · page)'},
+  {type:'mc',tag:'tg-on',lbl:'ON – Place',qtype:'Lugar',instr:'Choose the correct preposition:',sent:"There's a beautiful painting _____ the wall.",sig:'wall / surface',opts:['on','in','at','by'],ans:0,cor:"There's a painting <strong>on</strong> the wall.",exp:'<strong>ON</strong> for surfaces. Also: on the ceiling, on the roof, on the screen.',rule:'<strong>ON</strong> the wall · ceiling · screen · board · page'},
+  {type:'write',tag:'tg-on',lbl:'ON – Place',qtype:'Escribir',instr:'Fill in with AT, IN, or ON:',sent:'Your appointment is _____ the third floor.',sig:'floor / level',hint:'floor = ON',answers:['on'],cor:'Your appointment is <strong>on</strong> the third floor.',exp:'<strong>ON</strong> for floors/levels: on the first floor, on the ground floor.',rule:'<strong>ON</strong> the 1st · 2nd · 3rd floor · ground floor'},
+  {type:'3btn',tag:'tg-on',lbl:'ON – Place',qtype:'Lugar',instr:'Choose the correct preposition:',sent:'She lives _____ the coast of Costa Rica.',sig:'coast / border',ans:'on',cor:'She lives <strong>on</strong> the coast.',exp:'<strong>ON</strong> for lines and edges: on the coast, on the border, on the edge.',rule:'<strong>ON</strong> the coast · border · edge · left/right (side)'},
+  {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',instr:'Find the INCORRECT sentence:',sent:'Which one has an error?',sig:'ON place – error',opts:["She sat on the grass.","The cat jumped on the sofa.","He lives in the second floor.","There's a spider on the ceiling."],ans:2,cor:'"He lives <strong>on</strong> the second floor."',exp:'"In the second floor" is wrong. Floors/levels → <strong>ON</strong>.',rule:'<strong>ON</strong> the floor (level) — never IN the floor'},
+  {type:'write',tag:'tg-on',lbl:'ON – Place',qtype:'Escribir',instr:'Complete with the correct preposition:',sent:'The answer is _____ page 47.',sig:'page',hint:'page = ON (surface)',answers:['on'],cor:'The answer is <strong>on</strong> page 47.',exp:'"<strong>On</strong> page 47" = the page is a surface where the text sits.',rule:'<strong>ON</strong> page (number) · the screen · the right/left'}
+]},
+{big:3,id:'mix-time',label:'Mix – Tiempo',stab:'mix-s',color:'var(--mix)',
+qs:[
+  {type:'3btn',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Tiempo Mix',instr:'Which preposition is correct?',sent:'The concert is _____ Saturday night.',sig:'day + night',ans:'on',cor:'The concert is <strong>on</strong> Saturday night.',exp:'<strong>ON</strong> Saturday (day) + night. When you have a day + part of day, use ON.',rule:'<strong>ON</strong> + day + morning/afternoon/evening/night'},
+  {type:'3btn',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Tiempo Mix',instr:'Which preposition is correct?',sent:'He was born _____ the 1980s.',sig:'decade',ans:'in',cor:'He was born <strong>in</strong> the 1980s.',exp:'<strong>IN</strong> for decades and centuries.',rule:'<strong>IN</strong> the 1980s · 1990s · 21st century'},
+  {type:'mc',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Tiempo Mix',instr:'Choose all three correctly:',sent:'I wake up _____ 7am _____ Monday mornings, especially _____ winter.',sig:'time+day+season',opts:['at / on / in','in / on / at','on / at / in','at / in / on'],ans:0,cor:'I wake up <strong>at</strong> 7am <strong>on</strong> Monday mornings, especially <strong>in</strong> winter.',exp:'AT + exact time · ON + day · IN + season. This is the classic combo!',rule:'<strong>AT</strong> time · <strong>ON</strong> day · <strong>IN</strong> month/season/year'},
+  {type:'write',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Escribir',instr:'Fill in with AT, IN, or ON:',sent:'She was born _____ 1998, _____ a Tuesday, _____ 11 pm.',sig:'year/day/time',hint:'year→IN / day→ON / time→AT',answers:['in / on / at'],cor:'She was born <strong>in</strong> 1998, <strong>on</strong> a Tuesday, <strong>at</strong> 11 pm.',exp:'The classic trio: IN year, ON day, AT time.',rule:'<strong>IN</strong> year · <strong>ON</strong> day · <strong>AT</strong> exact time'},
+  {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',instr:'Find the sentence with an error:',sent:'Which one is INCORRECT?',sig:'time mix – error',opts:["She called me at midnight.","The wedding is on July 4th.","I usually exercise in the morning.","Let's meet in 3 o'clock."],ans:3,cor:'"Let\'s meet <strong>at</strong> 3 o\'clock."',exp:'"In 3 o\'clock" is wrong. Exact times → <strong>AT</strong>.',rule:'<strong>AT</strong> + clock time — never IN with times'},
+  {type:'write',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Escribir',instr:'Complete with AT, IN, or ON:',sent:'The store opens _____ 9am _____ weekdays and closes _____ 6pm.',sig:'time+day+time',hint:'9am→AT / weekdays→ON / 6pm→AT',answers:['at / on / at'],cor:'The store opens <strong>at</strong> 9am <strong>on</strong> weekdays and closes <strong>at</strong> 6pm.',exp:'AT for times, ON for days/weekdays.',rule:'<strong>AT</strong> + time · <strong>ON</strong> + day'}
+]},
+{big:3,id:'mix-place',label:'Mix – Lugar',stab:'mix-s',color:'var(--mix)',
+qs:[
+  {type:'3btn',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Lugar Mix',instr:'Which preposition is correct?',sent:'I left my phone _____ home.',sig:'home',ans:'at',cor:'I left my phone <strong>at</strong> home.',exp:'"<strong>At</strong> home" is a fixed expression. Also: at work, at school, at the office.',rule:'<strong>AT</strong> home · work · school · the office (fixed expressions)'},
+  {type:'mc',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Lugar Mix',instr:'Choose the correct preposition:',sent:'She sat _____ the chair and opened her laptop.',sig:'surface / position',opts:['on','in','at','by'],ans:0,cor:'She sat <strong>on</strong> the chair.',exp:'<strong>ON</strong> the chair (surface). BUT: <strong>IN</strong> the armchair / in the sofa (when you sink in).',rule:'Sit <strong>ON</strong> a chair · bench / Sit <strong>IN</strong> an armchair · sofa'},
+  {type:'write',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Escribir',instr:'Fill in: AT, IN, or ON?',sent:'He works _____ the hospital but lives _____ the suburbs.',sig:'building/area',hint:'hospital→AT (activity) / suburbs→IN (area)',answers:['at / in'],cor:'He works <strong>at</strong> the hospital but lives <strong>in</strong> the suburbs.',exp:'AT hospital (purpose/activity) vs IN the suburbs (enclosed area).',rule:'<strong>AT</strong> the hospital (visiting/working) · <strong>IN</strong> the suburbs'},
+  {type:'3btn',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Lugar Mix',instr:'Which preposition is correct?',sent:'The cat is sitting _____ the roof.',sig:'roof / surface',ans:'on',cor:'The cat is sitting <strong>on</strong> the roof.',exp:'<strong>ON</strong> the roof = on top of the surface.',rule:'<strong>ON</strong> the roof · ceiling · floor (surface)'},
+  {type:'mc',tag:'tg-err',lbl:'Error',qtype:'Error',instr:'Find the INCORRECT sentence:',sent:'Which one has an error?',sig:'place mix – error',opts:["She's in the garden.","He's at the cinema watching a film.","The post office is in the left.","My keys are on the kitchen counter."],ans:2,cor:'"The post office is <strong>on</strong> the left."',exp:'"In the left" is wrong. Directions/sides → <strong>ON</strong>: on the left, on the right.',rule:'<strong>ON</strong> the left · right · top · bottom side'},
+  {type:'mc',tag:'tg-mix',lbl:'AT/IN/ON',qtype:'Lugar Mix',instr:'Choose the correct options:',sent:'"Are you _____ the office?" "No, I\'m _____ a taxi, almost _____ the parking lot."',sig:'office/taxi/point',opts:['at / in / at','in / in / in','at / at / on','on / in / at'],ans:0,cor:'<strong>at</strong> the office / <strong>in</strong> a taxi / <strong>at</strong> the parking lot.',exp:'AT office (activity point) · IN taxi (enclosed vehicle) · AT parking lot (specific location).',rule:'<strong>IN</strong> a car/taxi/bus · <strong>AT</strong> a location'}
+]}
 ];
 
-// ══════════════════════════════════════════════════════
-// STATE
-// ══════════════════════════════════════════════════════
-const BIG_TABS = [
-  {label:'AT',  sub:'at-s',   activeClass:'active-at',  color:'var(--at)',  ids:['at-time','at-place']},
-  {label:'IN',  sub:'in-s',   activeClass:'active-in',  color:'var(--in)',  ids:['in-time','in-place']},
-  {label:'ON',  sub:'on-s',   activeClass:'active-on',  color:'var(--on)',  ids:['on-time','on-place']},
-  {label:'MIX', sub:'mix-s',  activeClass:'active-mix', color:'var(--mix)', ids:['mix-time','mix-place']},
+var BIG_TABS=[
+{label:‘AT’, sub:‘at-s’,  activeClass:‘active-at’,  color:‘var(–at)’,  ids:[‘at-time’,‘at-place’]},
+{label:‘IN’, sub:‘in-s’,  activeClass:‘active-in’,  color:‘var(–in)’,  ids:[‘in-time’,‘in-place’]},
+{label:‘ON’, sub:‘on-s’,  activeClass:‘active-on’,  color:‘var(–on)’,  ids:[‘on-time’,‘on-place’]},
+{label:‘MIX’,sub:‘mix-s’, activeClass:‘active-mix’, color:‘var(–mix)’, ids:[‘mix-time’,‘mix-place’]}
 ];
-let bigIdx = 0;
-let curSub = {}; // bigIdx → subIdx within that big
-BIG_TABS.forEach((_,i)=>{ curSub[i]=0; });
+var bigIdx=0, curSub={}, state={}, pts=0;
+BIG_TABS.forEach(function(*,i){curSub[i]=0;});
+DATA.forEach(function(sec){state[sec.id]={};sec.qs.forEach(function(*,qi){state[sec.id][qi]={answered:false,correct:false};});});
 
-let state = {}; // [secId][qi]
-DATA.forEach(sec=>{ state[sec.id]={}; sec.qs.forEach((_,qi)=>{ state[sec.id][qi]={answered:false,correct:false}; }); });
-let pts = 0;
-
-// ══════════════════════════════════════════════════════
-// BUILD
-// ══════════════════════════════════════════════════════
-function sectionsForBig(bi){ return DATA.filter(d=>d.big===bi); }
+function sectionsForBig(bi){return DATA.filter(function(d){return d.big===bi;});}
 
 function switchBig(bi){
-  bigIdx = bi;
-  BIG_TABS.forEach((_,i)=>{
-    const el = document.getElementById(`b3-${i}`);
-    el.className = `b3${i===bi?' '+BIG_TABS[i].activeClass:''}`;
-  });
-  buildSubtabs();
-  renderCurrent();
-  window.scrollTo({top:0,behavior:'smooth'});
+bigIdx=bi;
+BIG_TABS.forEach(function(_,i){var el=document.getElementById(‘b3-’+i);el.className=‘b3’+(i===bi?’ ‘+BIG_TABS[i].activeClass:’’);});
+buildSubtabs(); renderCurrent(); window.scrollTo({top:0,behavior:‘smooth’});
 }
 
 function buildSubtabs(){
-  const stabs = document.getElementById('stabs');
-  stabs.innerHTML='';
-  const secs = sectionsForBig(bigIdx);
-  secs.forEach((sec,i)=>{
-    const btn = document.createElement('button');
-    btn.className = `st${i===curSub[bigIdx]?' '+sec.stab:''}`;
-    btn.id = `st-${sec.id}`;
-    btn.textContent = sec.label;
-    btn.onclick = ()=>{ curSub[bigIdx]=i; buildSubtabs(); renderCurrent(); window.scrollTo({top:0,behavior:'smooth'}); };
-    stabs.appendChild(btn);
-  });
+var stabs=document.getElementById(‘stabs’); stabs.innerHTML=’’;
+var secs=sectionsForBig(bigIdx);
+secs.forEach(function(sec,i){
+var btn=document.createElement(‘button’);
+btn.className=‘st’+(i===curSub[bigIdx]?’ ‘+sec.stab:’’);
+btn.id=‘st-’+sec.id; btn.textContent=sec.label;
+btn.onclick=function(){curSub[bigIdx]=i;buildSubtabs();renderCurrent();window.scrollTo({top:0,behavior:‘smooth’});};
+stabs.appendChild(btn);
+});
 }
 
 function renderCurrent(){
-  const secs = sectionsForBig(bigIdx);
-  const sec  = secs[curSub[bigIdx]];
-  if(!sec) return;
-  renderSec(sec);
+var secs=sectionsForBig(bigIdx);
+var sec=secs[curSub[bigIdx]];
+if(!sec) return;
+renderSec(sec);
 }
 
 function renderSec(sec){
-  const s        = state[sec.id];
-  const total    = sec.qs.length;
-  const answered = Object.values(s).filter(x=>x.answered).length;
-  const correct  = Object.values(s).filter(x=>x.correct).length;
-  const wrong    = answered - correct;
-
-  // progress
-  const pf = document.getElementById('pf');
-  pf.style.width = (answered/total*100)+'%';
-  pf.style.background = sec.color;
-
-  // build sections div
-  const container = document.getElementById('sections');
-  container.innerHTML='';
-  const wrap = document.createElement('div');
-  wrap.className='wrap';
-
-  // ref card
-  const ref = document.createElement('div');
-  ref.className='ref';
-  ref.innerHTML=`
-    <div class="ref-title">📖 Quick Reference · AT · IN · ON</div>
-    <div class="ref-grid">
-      <div class="rbox rbox-at">
-        <div class="rbox-word">AT</div>
-        <div class="rbox-items">
-          <span>⏰ at 9am · at noon · at night</span>
-          <span>🎄 at Christmas · at Easter</span>
-          <span>📍 at home · at work · at school</span>
-          <span>🚉 at the airport · at the door</span>
-        </div>
-      </div>
-      <div class="rbox rbox-in">
-        <div class="rbox-word">IN</div>
-        <div class="rbox-items">
-          <span>📅 in 2024 · in July · in summer</span>
-          <span>🌅 in the morning · in the evening</span>
-          <span>🌍 in Costa Rica · in San José</span>
-          <span>📦 in the box · in the room</span>
-        </div>
-      </div>
-      <div class="rbox rbox-on">
-        <div class="rbox-word">ON</div>
-        <div class="rbox-items">
-          <span>📆 on Monday · on June 15th</span>
-          <span>☀️ on Sunday morning</span>
-          <span>🪑 on the table · on the wall</span>
-          <span>🏢 on the 3rd floor · on the left</span>
-        </div>
-      </div>
-    </div>`;
-  wrap.appendChild(ref);
-
-  // stats
-  const stats = document.createElement('div');
-  stats.className='stats';
-  stats.innerHTML=`
-    <div class="stat"><div class="sv" style="color:var(--green)">${correct}</div><div class="sl">✅ Correctas</div></div>
-    <div class="stat"><div class="sv" style="color:var(--red)">${wrong}</div><div class="sl">❌ Incorrectas</div></div>
-    <div class="stat"><div class="sv" style="color:var(--gold)">${total-answered}</div><div class="sl">🃏 Quedan</div></div>`;
-  wrap.appendChild(stats);
-
-  // complete box
-  const done = document.createElement('div');
-  done.className='done'+(answered===total?' show':'');
-  done.id=`done-${sec.id}`;
-  if(answered===total) fillDone(done,correct,total,sec);
-  wrap.appendChild(done);
-
-  // questions
-  sec.qs.forEach((q,qi)=>wrap.appendChild(buildCard(q,qi,sec)));
-  container.appendChild(wrap);
+var s=state[sec.id],total=sec.qs.length;
+var answered=Object.values(s).filter(function(x){return x.answered;}).length;
+var correct=Object.values(s).filter(function(x){return x.correct;}).length;
+var wrong=answered-correct;
+var pf=document.getElementById(‘pf’); pf.style.width=(answered/total*100)+’%’; pf.style.background=sec.color;
+var container=document.getElementById(‘sections’); container.innerHTML=’’;
+var wrap=document.createElement(‘div’); wrap.className=‘wrap’;
+var ref=document.createElement(‘div’); ref.className=‘ref’;
+ref.innerHTML=’<div class="ref-title">📖 Quick Reference · AT · IN · ON</div><div class="ref-grid"><div class="rbox rbox-at"><div class="rbox-word">AT</div><div class="rbox-items"><span>⏰ at 9am · at noon · at night</span><span>🎄 at Christmas · at Easter</span><span>📍 at home · at work · at school</span><span>🚉 at the airport · at the door</span></div></div><div class="rbox rbox-in"><div class="rbox-word">IN</div><div class="rbox-items"><span>📅 in 2024 · in July · in summer</span><span>🌅 in the morning · in the evening</span><span>🌍 in Costa Rica · in San José</span><span>📦 in the box · in the room</span></div></div><div class="rbox rbox-on"><div class="rbox-word">ON</div><div class="rbox-items"><span>📆 on Monday · on June 15th</span><span>☀️ on Sunday morning</span><span>🪑 on the table · on the wall</span><span>🏢 on the 3rd floor · on the left</span></div></div></div>’;
+wrap.appendChild(ref);
+var stats=document.createElement(‘div’); stats.className=‘stats’;
+stats.innerHTML=’<div class="stat"><div class="sv" style="color:var(--green)">’+correct+’</div><div class="sl">✅ Correctas</div></div><div class="stat"><div class="sv" style="color:var(--red)">’+wrong+’</div><div class="sl">❌ Incorrectas</div></div><div class="stat"><div class="sv" style="color:var(--gold)">’+(total-answered)+’</div><div class="sl">🃏 Quedan</div></div>’;
+wrap.appendChild(stats);
+var done=document.createElement(‘div’); done.className=‘done’+(answered===total?’ show’:’’); done.id=‘done-’+sec.id;
+if(answered===total) fillDone(done,correct,total,sec);
+wrap.appendChild(done);
+sec.qs.forEach(function(q,qi){wrap.appendChild(buildCard(q,qi,sec));});
+container.appendChild(wrap);
 }
 
-// ══════════════════════════════════════════════════════
-// BUILD CARD
-// ══════════════════════════════════════════════════════
 function buildCard(q,qi,sec){
-  const s = state[sec.id][qi];
-  const card = document.createElement('div');
-  card.className=`qcard${s.answered?(s.correct?' ok':' fail'):''}`;
-  card.id=`qc-${sec.id}-${qi}`;
-
-  const sentHTML = q.sent.includes('_____')
-    ? q.sent.replace(/_{3,}/g,'<span class="gap">_____</span>')
-    : q.sent;
-
-  const top = document.createElement('div');
-  top.className='qcard-top';
-  top.innerHTML=`
-    <div class="qmeta">
-      <div class="qnum" id="qn-${sec.id}-${qi}">${s.answered?(s.correct?'✓':'✗'):(qi+1)}</div>
-      <span class="qtag ${q.tag}">${q.lbl}</span>
-      <span class="qlbl">${q.qtype}</span>
-    </div>
-    <div class="qinstr">${q.instr}</div>
-    <div class="qsent">${sentHTML}${q.sig?`<br><span class="sig">🔑 ${q.sig}</span>`:''}</div>
-    ${q.hint?`<div style="margin-top:5px;font-size:.67rem;color:var(--muted);font-family:'DM Mono',monospace">💡 ${q.hint}</div>`:''}`;
-  card.appendChild(top);
-
-  // TYPE: 3btn
-  if(q.type==='3btn'){
-    const row = document.createElement('div');
-    row.className='three-btns';
-    ['at','in','on'].forEach(prep=>{
-      const btn=document.createElement('div');
-      btn.className=`prep-btn ${prep}${s.answered?' dis':''}`;
-      if(s.answered){
-        if(prep===q.ans) btn.className+=' ok';
-        else if(prep===s.chosen&&prep!==q.ans) btn.className+=' bad';
-      }
-      btn.innerHTML=`${prep.toUpperCase()}<span class="prep-btn-lbl">${prep==='at'?'punto':prep==='in'?'interior':'superficie'}</span>`;
-      if(!s.answered) btn.onclick=()=>pick3btn(sec,qi,prep);
-      row.appendChild(btn);
-    });
-    card.appendChild(row);
-  }
-  // TYPE: mc
-  else if(q.type==='mc'){
-    const wrap=document.createElement('div');
-    wrap.className='opts';
-    const letters=['A','B','C','D'];
-    q.opts.forEach((opt,oi)=>{
-      const div=document.createElement('div');
-      div.id=`opt-${sec.id}-${qi}-${oi}`;
-      let cls='opt';
-      if(s.answered){cls+=' dis';if(oi===q.ans)cls+=' ok';else if(oi===s.chosen&&oi!==q.ans)cls+=' bad';}
-      div.className=cls;
-      div.innerHTML=`<span class="ol">${letters[oi]}</span>${opt}`;
-      if(!s.answered) div.onclick=()=>pickMC(sec,qi,oi);
-      wrap.appendChild(div);
-    });
-    card.appendChild(wrap);
-  }
-  // TYPE: write
-  else {
-    const wrap=document.createElement('div');
-    wrap.className='write-area';
-    wrap.innerHTML=`
-      <div class="wr">
-        <input class="wi" id="wi-${sec.id}-${qi}" placeholder="at / in / on ?"
-          ${s.answered?'disabled':''}
-          onkeydown="if(event.key==='Enter')checkWrite('${sec.id}',${qi})">
-        <button class="chk" id="wb-${sec.id}-${qi}"
-          onclick="checkWrite('${sec.id}',${qi})"
-          ${s.answered?'disabled':''}>Check ✓</button>
-      </div>`;
-    card.appendChild(wrap);
-    if(s.answered&&s.saved){
-      setTimeout(()=>{
-        const wi=document.getElementById(`wi-${sec.id}-${qi}`);
-        if(wi){wi.value=s.saved;wi.className='wi '+(s.correct?'ok':'fail');}
-      },0);
-    }
-  }
-
-  // Feedback
-  const fb=document.createElement('div');
-  fb.id=`fb-${sec.id}-${qi}`;
-  fb.className=`fb${s.answered?' show '+(s.correct?'ok':'fail'):''}`;
-  if(s.answered){
-    fb.innerHTML=`${s.correct?'✅ <strong>Correct!</strong>':'❌ <strong>Incorrect.</strong>'} ${q.exp}
-      <div class="cor">✓ ${q.cor}</div>
-      <div class="rn"><strong>📐 Rule:</strong> ${q.rule}</div>`;
-  }
-  card.appendChild(fb);
-  return card;
+var s=state[sec.id][qi];
+var card=document.createElement(‘div’);
+card.className=‘qcard’+(s.answered?(s.correct?’ ok’:’ fail’):’’); card.id=‘qc-’+sec.id+’-’+qi;
+var sentHTML=q.sent.includes(’*****’)?q.sent.replace(/_{3,}/g,’<span class="gap">*****</span>’):q.sent;
+var top=document.createElement(‘div’); top.className=‘qcard-top’;
+top.innerHTML=’<div class="qmeta"><div class="qnum" id="qn-'+sec.id+'-'+qi+'">’+(s.answered?(s.correct?‘✓’:‘✗’):(qi+1))+’</div><span class="qtag '+q.tag+'">’+q.lbl+’</span><span class="qlbl">’+q.qtype+’</span></div><div class="qinstr">’+q.instr+’</div><div class="qsent">’+sentHTML+(q.sig?’<br><span class="sig">🔑 ‘+q.sig+’</span>’:’’)+’</div>’+(q.hint?’<div style="margin-top:5px;font-size:.67rem;color:var(--muted);font-family:\'DM Mono\',monospace">💡 ‘+q.hint+’</div>’:’’);
+card.appendChild(top);
+if(q.type===‘3btn’){
+var row=document.createElement(‘div’); row.className=‘three-btns’;
+[‘at’,‘in’,‘on’].forEach(function(prep){
+var btn=document.createElement(‘div’);
+var cls=‘prep-btn ‘+prep+(s.answered?’ dis’:’’);
+if(s.answered){if(prep===q.ans)cls+=’ ok’;else if(prep===s.chosen&&prep!==q.ans)cls+=’ bad’;}
+btn.className=cls;
+btn.innerHTML=prep.toUpperCase()+’<span class="prep-btn-lbl">’+(prep===‘at’?‘punto’:prep===‘in’?‘interior’:‘superficie’)+’</span>’;
+if(!s.answered) btn.onclick=function(){pick3btn(sec,qi,prep);};
+row.appendChild(btn);
+});
+card.appendChild(row);
+} else if(q.type===‘mc’){
+var wrap=document.createElement(‘div’); wrap.className=‘opts’;
+var letters=[‘A’,‘B’,‘C’,‘D’];
+q.opts.forEach(function(opt,oi){
+var div=document.createElement(‘div’); div.id=‘opt-’+sec.id+’-’+qi+’-’+oi;
+var cls=‘opt’+(s.answered?’ dis’:’’)+(s.answered&&oi===q.ans?’ ok’:s.answered&&s.chosen===oi&&oi!==q.ans?’ bad’:’’);
+div.className=cls; div.innerHTML=’<span class="ol">’+letters[oi]+’</span>’+opt;
+if(!s.answered) div.onclick=function(){pickMC(sec,qi,oi);};
+wrap.appendChild(div);
+});
+card.appendChild(wrap);
+} else {
+var wrap=document.createElement(‘div’); wrap.className=‘write-area’;
+wrap.innerHTML=’<div class="wr"><input class=“wi” id=“wi-’+sec.id+’-’+qi+’” placeholder=“at / in / on ?”’+(s.answered?’ disabled’:’’)+’ onkeydown=“if(event.key==='Enter')checkWrite('’+sec.id+’',’+qi+’)”><button class=“chk” id=“wb-’+sec.id+’-’+qi+’” onclick=“checkWrite('’+sec.id+’',’+qi+’)”’+(s.answered?’ disabled’:’’)+’>Check ✓</button></div>’;
+card.appendChild(wrap);
+if(s.answered&&s.saved){setTimeout(function(){var wi=document.getElementById(‘wi-’+sec.id+’-’+qi);if(wi){wi.value=s.saved;wi.className=‘wi ‘+(s.correct?‘ok’:‘fail’);}},0);}
+}
+var fb=document.createElement(‘div’); fb.id=‘fb-’+sec.id+’-’+qi;
+fb.className=‘fb’+(s.answered?’ show ‘+(s.correct?‘ok’:‘fail’):’’);
+if(s.answered){fb.innerHTML=(s.correct?‘✅ <strong>Correct!</strong>’:‘❌ <strong>Incorrect.</strong>’)+’ ‘+q.exp+’<div class="cor">✓ ‘+q.cor+’</div><div class="rn"><strong>📐 Rule:</strong> ‘+q.rule+’</div>’;}
+card.appendChild(fb);
+return card;
 }
 
-// ══════════════════════════════════════════════════════
-// INTERACTIONS
-// ══════════════════════════════════════════════════════
 function pick3btn(sec,qi,prep){
-  if(state[sec.id][qi].answered) return;
-  const q=sec.qs[qi];
-  const correct=prep===q.ans;
-  state[sec.id][qi]={answered:true,correct,chosen:prep};
-  applyResult(sec,qi,correct,q);
+if(state[sec.id][qi].answered) return;
+var q=sec.qs[qi], correct=prep===q.ans;
+state[sec.id][qi]={answered:true,correct:correct,chosen:prep};
+applyResult(sec,qi,correct,q);
 }
 
 function pickMC(sec,qi,oi){
-  if(state[sec.id][qi].answered) return;
-  const q=sec.qs[qi];
-  const correct=oi===q.ans;
-  state[sec.id][qi]={answered:true,correct,chosen:oi};
-  q.opts.forEach((_,i)=>{
-    const el=document.getElementById(`opt-${sec.id}-${qi}-${i}`);
-    if(!el) return; el.classList.add('dis'); el.onclick=null;
-    if(i===q.ans) el.classList.add('ok');
-    else if(i===oi&&!correct) el.classList.add('bad');
-  });
-  applyResult(sec,qi,correct,q);
+if(state[sec.id][qi].answered) return;
+var q=sec.qs[qi], correct=oi===q.ans;
+state[sec.id][qi]={answered:true,correct:correct,chosen:oi};
+q.opts.forEach(function(_,i){var el=document.getElementById(‘opt-’+sec.id+’-’+qi+’-’+i);if(!el)return;el.classList.add(‘dis’);el.onclick=null;if(i===q.ans)el.classList.add(‘ok’);else if(i===oi&&!correct)el.classList.add(‘bad’);});
+applyResult(sec,qi,correct,q);
 }
 
 function checkWrite(secId,qi){
-  const sec=DATA.find(d=>d.id===secId);
-  if(!sec||state[secId][qi].answered) return;
-  const q=sec.qs[qi];
-  const inp=document.getElementById(`wi-${secId}-${qi}`);
-  const btn=document.getElementById(`wb-${secId}-${qi}`);
-  if(!inp) return;
-  const val=inp.value.trim().toLowerCase().replace(/\s+/g,' ');
-  const correct=q.answers.some(a=>a.toLowerCase()===val||val.includes(a.toLowerCase()));
-  state[secId][qi]={answered:true,correct,saved:inp.value};
-  inp.disabled=true; if(btn) btn.disabled=true;
-  inp.className='wi '+(correct?'ok':'fail');
-  applyResult(sec,qi,correct,q);
+var sec=DATA.find(function(d){return d.id===secId;});
+if(!sec||state[secId][qi].answered) return;
+var q=sec.qs[qi];
+var inp=document.getElementById(‘wi-’+secId+’-’+qi);
+var btn=document.getElementById(‘wb-’+secId+’-’+qi);
+if(!inp) return;
+var val=inp.value.trim().toLowerCase().replace(/\s+/g,’ ’);
+var correct=q.answers.some(function(a){return a.toLowerCase()===val||val.includes(a.toLowerCase());});
+state[secId][qi]={answered:true,correct:correct,saved:inp.value};
+inp.disabled=true; if(btn) btn.disabled=true;
+inp.className=’wi ’+(correct?‘ok’:‘fail’);
+applyResult(sec,qi,correct,q);
 }
 
 function applyResult(sec,qi,correct,q){
-  const card=document.getElementById(`qc-${sec.id}-${qi}`);
-  const num =document.getElementById(`qn-${sec.id}-${qi}`);
-  const fb  =document.getElementById(`fb-${sec.id}-${qi}`);
-  if(card) card.classList.add(correct?'ok':'fail');
-  if(num)  num.textContent=correct?'✓':'✗';
-  if(fb){
-    fb.innerHTML=`${correct?'✅ <strong>Correct!</strong>':'❌ <strong>Incorrect.</strong>'} ${q.exp}
-      <div class="cor">✓ ${q.cor}</div>
-      <div class="rn"><strong>📐 Rule:</strong> ${q.rule}</div>`;
-    fb.className=`fb show ${correct?'ok':'fail'}`;
-  }
-  if(correct){pts+=10; document.getElementById('g-pts').textContent=pts;}
-
-  // update stats
-  const s=state[sec.id];
-  const total=sec.qs.length;
-  const answered=Object.values(s).filter(x=>x.answered).length;
-  const corr=Object.values(s).filter(x=>x.correct).length;
-  const wrong=answered-corr;
-  const sv=document.querySelectorAll('.sv');
-  if(sv[0]) sv[0].textContent=corr;
-  if(sv[1]) sv[1].textContent=wrong;
-  if(sv[2]) sv[2].textContent=total-answered;
-  const pf=document.getElementById('pf');
-  if(pf) pf.style.width=(answered/total*100)+'%';
-
-  if(answered===total) setTimeout(()=>{
-    const done=document.getElementById(`done-${sec.id}`);
-    if(done){fillDone(done,corr,total,sec);done.classList.add('show');done.scrollIntoView({behavior:'smooth',block:'center'});}
-  },500);
+var card=document.getElementById(‘qc-’+sec.id+’-’+qi);
+var num=document.getElementById(‘qn-’+sec.id+’-’+qi);
+var fb=document.getElementById(‘fb-’+sec.id+’-’+qi);
+if(card) card.classList.add(correct?‘ok’:‘fail’);
+if(num)  num.textContent=correct?‘✓’:‘✗’;
+if(fb){fb.innerHTML=(correct?‘✅ <strong>Correct!</strong>’:‘❌ <strong>Incorrect.</strong>’)+’ ‘+q.exp+’<div class="cor">✓ ‘+q.cor+’</div><div class="rn"><strong>📐 Rule:</strong> ‘+q.rule+’</div>’;fb.className=‘fb show ‘+(correct?‘ok’:‘fail’);}
+if(correct){pts+=10;document.getElementById(‘g-pts’).textContent=pts;}
+var s=state[sec.id],total=sec.qs.length;
+var answered=Object.values(s).filter(function(x){return x.answered;}).length;
+var corr=Object.values(s).filter(function(x){return x.correct;}).length;
+var wrong=answered-corr;
+var sv=document.querySelectorAll(’.sv’);
+if(sv[0]) sv[0].textContent=corr;
+if(sv[1]) sv[1].textContent=wrong;
+if(sv[2]) sv[2].textContent=total-answered;
+var pf=document.getElementById(‘pf’); if(pf) pf.style.width=(answered/total*100)+’%’;
+if(answered===total) setTimeout(function(){var done=document.getElementById(‘done-’+sec.id);if(done){fillDone(done,corr,total,sec);done.classList.add(‘show’);done.scrollIntoView({behavior:‘smooth’,block:‘center’});}},500);
 }
 
 function fillDone(el,correct,total,sec){
-  const pct=Math.round(correct/total*100);
-  const secs=sectionsForBig(bigIdx);
-  const idx=secs.indexOf(sec);
-  const nextSec=secs[(idx+1)%secs.length];
-  el.innerHTML=`
-    <div class="done-emoji">${pct>=90?'🏆':pct>=70?'🎉':pct>=50?'📖':'💪'}</div>
-    <div class="done-score" style="color:${sec.color}">${correct}/${total}</div>
-    <div class="done-lbl">correctas en ${sec.label}</div>
-    <div class="done-grade">${pct>=90?'🔥 Perfect! You\'ve mastered this.':pct>=70?'👍 Great work!':pct>=50?'📖 Good effort — review the rules.':'💪 Keep practicing!'}</div>
-    <div class="done-chips">
-      <div class="dc dc-ok">✅ ${correct} correctas</div>
-      <div class="dc dc-fail">❌ ${total-correct} incorrectas</div>
-      <div class="dc dc-pts">⭐ +${correct*10} pts</div>
-    </div>
-    <div class="done-btns">
-      <button class="db db-p" onclick="restart('${sec.id}')">↺ Repetir</button>
-      <button class="db db-s" onclick="jumpTo('${nextSec.id}')">→ ${nextSec.label}</button>
-    </div>`;
+var pct=Math.round(correct/total*100);
+var secs=sectionsForBig(bigIdx);
+var idx=secs.indexOf(sec);
+var nextSec=secs[(idx+1)%secs.length];
+el.innerHTML=’<div class="done-emoji">’+(pct>=90?‘🏆’:pct>=70?‘🎉’:pct>=50?‘📖’:‘💪’)+’</div>’+
+‘<div class="done-score" style="color:'+sec.color+'">’+correct+’/’+total+’</div>’+
+‘<div class="done-lbl">correctas en ‘+sec.label+’</div>’+
+‘<div class="done-grade">’+(pct>=90?‘🔥 Perfect! You've mastered this.’:pct>=70?‘👍 Great work!’:pct>=50?‘📖 Good effort — review the rules.’:‘💪 Keep practicing!’)+’</div>’+
+‘<div class="done-chips"><div class="dc dc-ok">✅ ‘+correct+’ correctas</div><div class="dc dc-fail">❌ ‘+(total-correct)+’ incorrectas</div><div class="dc dc-pts">⭐ +’+(correct*10)+’ pts</div></div>’+
+‘<div class="done-btns"><button class="db db-p" onclick="restart(\''+sec.id+'\')">↺ Repetir</button><button class="db db-s" onclick="jumpTo(\''+nextSec.id+'\')">→ ‘+nextSec.label+’</button></div>’;
 }
 
 function restart(secId){
-  const sec=DATA.find(d=>d.id===secId);
-  Object.values(state[secId]).forEach(s=>{if(s.correct)pts-=10;});
-  pts=Math.max(0,pts);
-  document.getElementById('g-pts').textContent=pts;
-  state[secId]={};
-  sec.qs.forEach((_,qi)=>{state[secId][qi]={answered:false,correct:false};});
-  renderCurrent();
-  window.scrollTo({top:0,behavior:'smooth'});
+var sec=DATA.find(function(d){return d.id===secId;});
+Object.values(state[secId]).forEach(function(s){if(s.correct)pts-=10;});
+pts=Math.max(0,pts); document.getElementById(‘g-pts’).textContent=pts;
+state[secId]={}; sec.qs.forEach(function(_,qi){state[secId][qi]={answered:false,correct:false};});
+renderCurrent(); window.scrollTo({top:0,behavior:‘smooth’});
 }
 
 function jumpTo(secId){
-  const sec=DATA.find(d=>d.id===secId);
-  const secs=sectionsForBig(sec.big);
-  const idx=secs.indexOf(sec);
-  bigIdx=sec.big;
-  curSub[bigIdx]=idx;
-  BIG_TABS.forEach((_,i)=>{
-    const el=document.getElementById(`b3-${i}`);
-    el.className=`b3${i===bigIdx?' '+BIG_TABS[i].activeClass:''}`;
-  });
-  buildSubtabs();
-  renderCurrent();
-  window.scrollTo({top:0,behavior:'smooth'});
+var sec=DATA.find(function(d){return d.id===secId;});
+var secs=sectionsForBig(sec.big);
+bigIdx=sec.big; curSub[bigIdx]=secs.indexOf(sec);
+BIG_TABS.forEach(function(_,i){var el=document.getElementById(‘b3-’+i);el.className=‘b3’+(i===bigIdx?’ ‘+BIG_TABS[i].activeClass:’’);});
+buildSubtabs(); renderCurrent(); window.scrollTo({top:0,behavior:‘smooth’});
 }
 
-// INIT
 buildSubtabs();
 renderCurrent();
 </script>
 
 </body>
 </html>
+  
